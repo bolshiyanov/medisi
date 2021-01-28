@@ -1,24 +1,438 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Modal example</title>
+  <title>Пример модального окна в js</title>
+  <meta name="description" content="В это примере реализовано модальное окно, которое может быть использовано для корзины заказа интернет магазина.
+    В проекте реализовано два модальных окна. Первое позволяет просматривать карточку заказа. Окно реализованоно на js в методе замыкания.
+    Второе окно предназначено для удаления товара из корзины. Окно реализовано через Promise." />
+  <link rel="canonical" href="https://modal-example.vercel.app/" />
+  <meta property="og:site_name" content="Пример модального окна в js" />
+  <meta property="og:url" content="https://modal-example.bolshiyanov.vercel.app/" />
+  <meta property="og:locale" content="https://modal-example.bolshiyanov.vercel.app/" />
+  <meta property="og:type:profile:username" content="Пример модального окна в js" />
+  <meta property="og:image" content="В это примере реализовано модальное окно, которое может быть использовано для корзины заказа интернет магазина.
+    В проекте реализовано два модальных окна. Первое позволяет просматривать карточку заказа. Окно реализованоно на js в методе замыкания.
+    Второе окно предназначено для удаления товара из корзины. Окно реализовано через Promise." />
+  <meta property="og:image:secure_url" content="https://sweety.link/restaurante512.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:title" content="Пример модального окна в js" />
+  <meta property="og:description" content="В это примере реализовано модальное окно, которое может быть использовано для корзины заказа интернет магазина.
+    В проекте реализовано два модальных окна. Первое позволяет просматривать карточку заказа. Окно реализованоно на js в методе замыкания.
+    Второе окно предназначено для удаления товара из корзины. Окно реализовано через Promise." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="https://modal-example.bolshiyanov.vercel.app/" />
+  <meta name="twitter:title" content="Пример модального окна в js" />
+  <meta name="twitter:description" content="Progressive web application" />
+  <meta name="twitter:creator" content="Пример модального окна в js" />
+  <meta name="twitter:domain" content="https://modal-example.vercel.app/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+  <link rel="icon" href="https://sweety.link/favicon.ico" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#fff" />
+  <meta name="author" content="Roman Bolshiyanov bolshiyanov@gmail.com" />
+  <link rel="author" href="https://www.instagram.com/pwacreator_ru" />
+  <meta name="date" content="May 01 2020 10:10 GMT" />
+  <meta name="revisit-after" content="1 days" />
+  <meta name="robots" content="all" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="msapplication-navbutton-color" content="#ffffff" />
+  <meta name="keywords" content="js, исходные файлы, git, модальное окно" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="yandex-verification" content="5976d0d817695d71" />
+  <meta name="google-site-verification" content="do7ZuLoHbgkAGa1DlOiMniYcZAfDN-O5932IMYv9MXw" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/modal.css">
 </head>
+
 <body>
   <div class="container">
-    <h1>Modal example</h1>
+    <h1>Modal example in js</h1>
+    <p>В этом примере реализовано техническое решение, которое может быть использовано для корзины заказа интернет
+      магазина.
+      В проекте реализовано два модальных окна. Первое позволяет просматривать карточку заказа. Окно реализованоно на js
+      в методе замыкания.
+      Второе окно предназначено для удаления товара из корзины. Окно реализовано через Promise. Скачать исходные файлы
+      вы можете в git:
+    </p>
+    <a href="https://github.com/bolshiyanov/Modal-example">https://github.com/bolshiyanov/Modal-example</a></br>
+    <a href="https://dash.sweety.link">Другие мои проекты</a>
     <!-- // html разметка будет сгенерирована в index.js -->
     <div class="card-deck" id="fruits"></div>
+    <h2>Исходные файлы модального окна в JS c с комментариями на руссом</h2>
+    <h3>confirm.js</h3>
+    <p>
+    <pre>
+        <code>// Это плагин confirm, а именно модальное окно с удалением фрукта.
+// Так как модальное окно может висеть сколько угодно долго, 
+// имеет смысл обрабатывать его асинхронно. Для этого создаем 
+// компонен Confirm.js внутри компонента index.js и используем Promise.
+
+$.confirm = function (options) {
+    // Промис $.confirm позволяет выполняться всему коду приложения, пока отрисовано модальное окно 
+    // confirm и не нажата ни одна кнопка, продолжается выполнение программы.
+    return new Promise((resolve, reject) => {
+        const modal = $.modal({
+            title: options.title,
+            width: '400px',
+            closable: false,
+            content: options.content,
+            // Так как при каждом закрытии окна у нас остается модальное окно в dom,
+            // что приводит к утечке памяти, будем использовать Hook onClose который (был создан в modal.js)
+            // для удаления Vmodal из Dom дерева, который был реализован в modal.js :
+            // когда then передает true из 
+            onClose() {
+                modal.destroy()
+            },
+           // Конец реализации хука тут
+
+            footerButtons: [
+                {text: 'Отменить', type: 'secondary', handler() {
+                        modal.close()
+                        reject() 
+                    }},
+                {text: 'Удалить', type: 'danger', handler() {
+                        modal.close()
+                        resolve()
+                    }}
+            ]
+        })
+
+        // Так как модальное окно confirm открывается мгновенно, 
+        // нам нужна задержка для отрисовки анимации. Поэтому добавляем таймаут.
+        setTimeout(() => modal.open(), 400)
+    })
+}</code>
+        </pre>
+    </p>
+
+    <h3>modal.js</h3>
+    <p>
+    <pre>
+        <code>// Это плагин modal
+
+
+          // НАЧАЛО КНОПКИ 
+          // Этот метод создает объект footer.appendAfter в dom дереве. В данной реализации элемент footer и 
+          // есть this который при помощи метода insertBefore добавляет в parentNode прототип класса Element
+          Element.prototype.appendAfter = function (element) {
+              element.parentNode.insertBefore(this, element.nextSibling);
+          }
+          
+          // Пустая функция
+          function noop() { }
+          
+          function _creatModalFooter(buttons = []) {
+              if (buttons.length === 0) {
+                  return document.createElement('div')
+              }
+              // Создаем html контейнер для кнопок
+              const wrap = document.createElement('div')
+              wrap.classList.add('modal-footer')
+          
+              // Создаем button, если хотябы одна кнопка есть в options footerButtons 
+              // которые пришли из index.js или из confirm.js при помощи forEach для перебора массива 
+              buttons.forEach(btn => {
+                  //Реализация плагина $btn
+                  const $btn = document.createElement('button')
+                  $btn.textContent = btn.text
+                  $btn.classList.add('btn')
+                  $btn.classList.add(`btn-${btn.type || 'secondary'}`)
+                  $btn.onclick = btn.handler || noop
+              // Встраиваем кнопки в контейнер
+                  wrap.appendChild($btn)
+              })
+              // Отрисовываем в dom дереве
+              return wrap
+          }
+          // КОНЕЦ КНОПКИ
+          
+          
+          // С помощью _createModal этой приватной функуции мы генерируем  модальное окна, а динамический контент получен 
+          // из плагина modal 
+          function _createModal(options) {
+              const DEFAULT_WIDTH = '400px'
+              // Здесь мы определяем константу, которая получает в себя автоматически сгенерированный html 
+              // для шаблона модального окна
+              const modal = document.createElement('div')
+              // Подключаем css класс vmodal
+              modal.classList.add('vmodal')
+              // Определяем шаблон  html для модального окна
+              modal.insertAdjacentHTML('afterbegin', `Шаблон смотреть в git`)
+              // Здесь мы определяем константу, которая получает сгенерированный динамический footer
+              const footer = _creatModalFooter(options.footerButtons)
+              // Здесь мы определяем после какого элемента нужно встроить footer в html модального окна,
+              // а именно полсле div с querySelector('[data-content')
+              footer.appendAfter(modal.querySelector('[data-content'))
+              document.body.appendChild(modal)
+              return modal
+          }
+          
+          // Вызываем функцию замыкания 
+          $.modal = function (options) {
+              const ANIMATION_SPEED = 200
+              // Здесь $modal передает свои свойства, которые он получил на странице index.js,
+              // в функцию _createModal в ее (options)
+              const $modal = _createModal(options)
+              
+              //Чтобы перезаписывать константы должны быть let
+              let closing = false
+              let destroyed = false
+          
+              // Описываем открытие и закрытие модального окна за счет изменения стилей css
+              const modal = {
+                  open() {
+                      // Чтобы избегать потенциальных утечек памяти в крупных проектах нужно удалять методы у удаленных объктов.
+                      if (destroyed) {
+                          console.log('Modal is destroyed')
+                      }
+                      // Так как у нас есть задержка при закрытии окна, из-за того что  наша анимация длится 200ms, 
+                      // то нам нужно запретить присвоение класса .open пока длится анимация
+                      !closing && $modal.classList.add('open')
+                  },
+                  close() {
+                      closing = true
+                      $modal.classList.remove('open')
+                      $modal.classList.add('hide')
+                      setTimeout(() => {
+                          $modal.classList.remove('hide')
+                          closing = false
+                          // Так как при каждом закрытии окна у нас остается модальное окно в dom,
+                          // что приводит к утечке памяти, реализуем Hook onClose 
+                          // для удаления Vmodal из Dom дерева: 
+                          // Учитывая, что у нас есть метод close и есть таймаут мы спрашиваем есть ли в прототипе метод
+                          // onClose и являетсяли он функцией и если true , то передаем в options значение onClose
+                          if (typeof options.onClose === 'function') {
+                              options.onClose()
+                          }
+                          // Конец Хука тут
+          
+                      }, ANIMATION_SPEED)
+          
+                  }
+              }
+          
+              // dataset получает значение true из атрибута data в строке 51 и 55. Если в dataset есть close 
+              // то вызываем метод modal.close() и закрываем модальное окно
+              const listner = event => {
+                  if (event.target.dataset.close) {
+                      modal.close()
+                  }
+              }
+              
+              // Здесь представлен правильный способ удаления слушателя и для этого мы добавляем listner в саму ноду, 
+              // чтобы позже мы согли удалить слушателя. Стоит обратить внимание, что это работает потому, что мы с вами находимся в замыкании.
+              $modal.addEventListener('click', listner)
+           
+              // Наиважнейшей задачей в js является очистка dom дерева модального окна и его слушателя тогда, когда окно уже закрыто.
+              // Для этого мы добавляем к объекту modal метод destroy  прямо в return с помощью Object.assign
+              return Object.assign(modal, {
+                  destroy() {
+                      // Чтобы убрать объект modal из dom дерева мы обращаемся к ноде $modal (к его parentNode) и вызываем метод removeChild и удаляем mode.
+                      // Это обычный метод удаления ноды объектов из dom дерева и он может быть использован всегда.
+                      $modal.parentNode.removeChild($modal)
+                      // Во избежании потенциальных утечек памяти всегда удаляем слушателя события из закрытых и удаленных dom элементов.
+                      $modal.removeEventListener('click', listner)
+                      destroyed = true
+                  },
+          
+                  //Контент полученый из index.html встраивается в шаблон как html
+                  setContent(html) {
+                      $modal.querySelector('[data-content]').innerHTML = html
+                  }
+              })
+          }
+          </code>
+        </pre>
+    </p>
+
+    <h3>index.js</h3>
+    <p>
+    <pre>
+        <code>// Это главная страница 
+
+          // Здесь отрисован статический массив для использования в приложении. В боевом приложении этот массив дожен быть получен с сервера.
+          let fruits = [
+              { id: 1, title: 'Яблоки', price: 20, img: 'https://7ogorod.ru/wp-content/uploads/2018/09/bd0db605aee5bfe315ae429559447695_big.jpeg' },
+              { id: 2, title: 'Апельсины', price: 30, img: 'https://live.staticflickr.com/65535/49098795842_af0d66f74c_b.jpg' },
+              { id: 3, title: 'Манго', price: 40, img: 'https://samui-site.ru/wp-content/uploads/2019/01/ExternalLink_shutterstock_388186099-768x619.jpg' }
+          ]
+          
+          //Здесь генерируется html разметка с данными из объектов массива fruits
+          const toHTML = fruit => ` Шаблон смотреть в git `
+          //Здесь встраивается html разметка для div #fruits на index.html   
+          function render() {
+              const html = fruits.map(toHTML).join('')
+              document.querySelector('#fruits').innerHTML = html
+          }
+          // Чтобы созданный html был отрисован в index.html нужно вызвать метод render()
+          render()
+          
+          // Здесь формируется контент для плагина modal и пробрасывается в options плагин modal
+          const priceModal = $.modal({
+              title: 'Цена на товар',
+              closable: true,
+              width: '400px',
+              footerButtons: [
+                  {
+                      text: 'Закрыть', type: 'primary', handler() {
+                          priceModal.close()
+                      }
+                  }
+              ]
+          })
+          // Прослушиваем click и ловим event который мы определили в строках 15 и 16 в атрибутах data
+          document.addEventListener('click', event => {
+              event.preventDefault()
+              const btnType = event.target.dataset.btn
+              // Чтобы поиск по id сработал мы должны переопределить 
+              // его в тип Number поэтому добавляем + 
+              const id = +event.target.dataset.id
+              
+              const fruit = fruits.find(f => f.id === id)
+          
+             // Обращение к кнопке у которой data атрибут равен price и добавление текста в сontent плагина modalчерез setContent
+              if (btnType === "price") {
+                  priceModal.setContent(`
+                  <p>Цена на ${fruit.title}: <strong>${fruit.price}$</strong></p>
+                  `)
+                  priceModal.open()
+              } 
+              
+              // Обращение к кнопке у которой data атрибут равен remove
+              else if (btnType === "remove") {
+                  // Здесь мы обращаемся к плагину confirm и передаем текст ему в content через options. 
+                  // Плагин откроется автоматически, так как в нем внутри определен метод modal.open
+                  $.confirm({
+                      title: 'Вы уверены?',
+                      content: `
+                      <p>Вы удаляете фрукт <strong>${fruit.title}</strong></p>
+                      `
+                  }).then(() => {
+                      // Здесь происходит удаление объекта из массива fruits 
+                      // Для этого мы переопределяем массив или можно сказать перезаписываем его заново.
+                      // Новый массив fruits будет состоять из объектов старого массива fruitsв которых 
+                      // нет id который совпал с id на кнопке с типом remove
+                      fruits = fruits.filter(f => f.id !== id)
+                      //Чтобы отрисовть новый массив fruits нужно вызвать render()
+                      render()
+                  })
+                  .catch(() => {
+                      console.log('Cancel')
+                  })
+          
+              }
+          })</code>
+        </pre>
+    </p>
+
+    <h3>base.js</h3>
+    <p>
+    <pre>
+        <code>// Страница для подключения к глобальному сколу windows.$ = $
+
+          const $ = {
+          }</code>
+        </pre>
+    </p>
+
+
+
+    <h3>modal.css</h3>
+    <p>
+    <pre>
+        <code>.vmodal {}
+
+          .vmodal.open .modal-overlay,
+          .vmodal.open .modal-window {
+            opacity: 1;
+            z-index: 1000;
+          }
+          
+          .vmodal.hide .modal-overlay,
+          .vmodal.hide .modal-window {
+            opacity: 1;
+            z-index: 1000;
+          }
+          
+          .vmodal.open .modal-overlay {
+            background: rgba(0, 0, 0, 0.5);
+          }
+          
+          .vmodal.open .modal-window {
+            transform: translateY(100px);
+          }
+          
+          .vmodal.hide .modal-overlay {
+            background: rgba(0, 0, 0, 0);
+          }
+          
+          .vmodal.hide .modal-window {
+            transform: translateY(1000px);
+          }
+          
+          .modal-window, .modal-overlay {
+            opacity: 0;
+            z-index: -1;
+          }
+          
+          .modal-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            transition: background .4s ease-in;
+          }
+          
+          .modal-window {
+            width: 600px;
+            border-radius: 5px;
+            background: #fff;
+            margin: 0 auto;
+            transform: translateY(1000px);
+            transition: transform .4s ease-in;
+          }
+          
+          .modal-header {
+            padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee; 
+          }
+          
+          .modal-title {
+            font-size: 1.5rem;
+          }
+          
+          .modal-close {
+            cursor: pointer;
+          }
+          
+          .modal-body {
+            padding: 10px;
+          }
+          .modal-body p {
+            margin: 0 0 5px;
+          }
+          
+          .modal-footer {
+            padding: 5px 10px;
+            border-top: 1px solid #eee;
+          }</code>
+        </pre>
+    </p>
   </div>
   <script src="base.js"></script>
   <script src="plugins/modal.js"></script>
   <script src="plugins/confirm.js"></script>
   <script src="index.js"></script>
-</body> 
+</body>
 
 </html>
