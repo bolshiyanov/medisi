@@ -1,12 +1,3 @@
-/*!
- *  Howler.js Audio Player Demo
- *  howlerjs.com
- *
- *  (c) 2013-2020, James Simpson of GoldFire Studios
- *  goldfirestudios.com
- *
- *  MIT License
- */
 
 // Cache references to DOM elements.
 var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
@@ -272,21 +263,6 @@ Player.prototype = {
 // Setup our new audio player class and pass it the playlist.
 var player = new Player([
     {
-        title: 'Rave Digger',
-        file: 'rave_digger',
-        howl: null
-    },
-    {
-        title: '80s Vibe',
-        file: '80s_vibe',
-        howl: null
-    },
-    {
-        title: 'Running Out',
-        file: 'running_out',
-        howl: null
-    },
-    {
         title: 'medisi_1',
         file: 'medisi_1',
         howl: null
@@ -294,41 +270,6 @@ var player = new Player([
     {
         title: 'medisi_2',
         file: 'medisi_2',
-        howl: null
-    },
-    {
-        title: 'medisi_3',
-        file: 'medisi_3',
-        howl: null
-    },
-    {
-        title: 'medisi_4',
-        file: 'medisi_4',
-        howl: null
-    },
-    {
-        title: 'medisi_5',
-        file: 'medisi_5',
-        howl: null
-    },
-    {
-        title: 'medisi_6',
-        file: 'medisi_6',
-        howl: null
-    },
-    {
-        title: 'medisi_7',
-        file: 'medisi_7',
-        howl: null
-    },
-    {
-        title: 'medisi_8',
-        file: 'medisi_8',
-        howl: null
-    },
-    {
-        title: 'medisi_9',
-        file: 'medisi_9',
         howl: null
     }
 ]);
