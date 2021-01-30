@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <title>Medisi</title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,84 +16,81 @@
       <!-- Хедер -->
       <div class="header">
         <div class="header-box">
-          <div class="header-box-logo" \></div>
+          <div class="header-box-logo" style="background-image: URL(images/medisilogo.png)"></div>
           <div class="header-box-name">MediSi</div>
         </div>
       </div>
       <!-- Карусель медитаций -->
-      <div class="header-carousel">
-
-        <div class="header-carousel-card">
-
-          <div class="header-carousel-card-item">
-            <div class="header-carousel-card-item-image" style="background-image: URL(images/sleep.jpg)"></div>
-            <div class="header-carousel-card-item-title" >Сон</div>
+      <div class="carousel">
+        <div class="carousel-card">
+          <div class="carousel-card-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/sleep.jpg)"></div>
+            <div class="carousel-card-item-title">Сон</div>
           </div>
-
-
-          <div class="header-carousel-card-item">
-            <div class="header-carousel-card-item-image" style="background-image: URL(images/health.jpg)"></div>
-            <div class="header-carousel-card-item-title">Здоровье</div>
+          <div class="carousel-card-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/health.jpg)"></div>
+            <div class="carousel-card-item-title">Здоровье</div>
           </div>
-
-
-          <div class="header-carousel-card-item">
-            <div class="header-carousel-card-item-image" style="background-image: URL(images/abundance.jpg)"></div>
-            <div class="header-carousel-card-item-title">Изобилие</div>
+          <div class="carousel-card-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/abundance.jpg)"></div>
+            <div class="carousel-card-item-title">Изобилие</div>
           </div>
-
-
-          <div class="header-carousel-card-item">
-            <div class="header-carousel-card-item-image" style="background-image: URL(images/relationships.jpg)"></div>
-            <div class="header-carousel-card-item-title">Отношения</div>
+          <div class="carousel-card-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/relationships.jpg)"></div>
+            <div class="carousel-card-item-title">Отношения</div>
           </div>
-
         </div>
-
       </div>
       <!-- Кнопка -->
-      <div class="button">ВАШИ ПОПИСКИ</div>
+      <div class="subscriptions">
+        <div class="subscriptions-button"><SPAN>ВАШИ ПОДПИСКИ</SPAN></div>
+      </div>
       <!-- Карусель коллекций -->
-      <div class="promo-carousel">
-        <div class="promo-carousel-card">
-          <div class="promo-carousel-card-descriptions">Сборник медитаций про отношения</div>
+      <div class="carousel">
+        <div class="carousel-card">
+          <div class="carousel-promo-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/relationships.jpg)"></div>
+            <div class="carousel-promo-item-title">Сборник медитаций для улучшения отношений</div>
+          </div>
+          <div class="carousel-promo-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/abundance.jpg)"></div>
+            <div class="carousel-promo-item-title">Сборник медитаций на привличение изобилия</div>
+          </div>
+          <div class="carousel-promo-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/health.jpg)"></div>
+            <div class="carousel-promo-item-title">Сборник медитаций для оздоровления</div>
+          </div>
+          <!-- <div class="carousel-promo-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/sleep.jpg); background-position: center;"></div>
+            <div class="carousel-promo-item-title">Сборник медитаций для релакса и сна</div>
+          </div> -->
         </div>
       </div>
-      <div class="promo-carousel">
-        <div class="promo-carousel-card">
-          <div class="promo-carousel-card-descriptions">Сборник медитаций про изобилие</div>
-        </div>
-      </div>
-      <div class="promo-carousel">
-        <div class="promo-carousel-card">
-          <div class="promo-carousel-card-descriptions">Сборник медитаций про здоровье</div>
-        </div>
-      </div>
-      <div class="promo-carousel">
-        <div class="promo-carousel-card">
-          <div class="promo-carousel-card-descriptions">Сборник медитаций для расслаблений</div>
-        </div>
-      </div>
+      <!-- Заголовок -->
       <h1>MediSi</h1>
       <p>Медитация - это путь к новым горизонтам вашего сознания</p>
       <div id="share"></div>
       <div id="pwaInstall"></div>
       <!-- Футер -->
-      <div class="footer"></div>
-      <div class="footer-name">MediSi</div>
-      <div class="footer-pwa">
-        <div class="class=footer-pwa-brand-item"></div>
-        <div class="class=footer-pwa-brand-item"></div>
-        <div class="class=footer-pwa-brand-item"></div>
-        <div class="class=footer-pwa-brand-item"></div>
+      <div class="footer">
+        <div class="footer-box">
+          <div class="footer-name">MediSi</div>
+          <div class="footer-pwa">
+            <ion-icon size="large" name="logo-pwa"></ion-icon>
+            <ion-icon name="logo-apple"></ion-icon>
+            <ion-icon name="logo-android"></ion-icon>
+            <ion-icon name="logo-windows"></ion-icon>
+          </div>
+          <div class="footer-sweety">TRY®SWEETY 2021</div>
+        </div>
       </div>
-      <div class="class=footer-sweety">SWEETY 2021</div>
     </div>
   </div>
   <!-- <div class="card-deck" id="promo"></div> -->
   <script src="plugins/base.js"></script>
   <script src="plugins/promoModal.js"></script>
   <script src="plugins/promo.js"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 
 </html>
