@@ -19,7 +19,7 @@ var Player = function(playlist) {
 
     // Setup the playlist display.
     playlist.forEach(function(song) {
-        var div = document.createElement('div');
+        var div = document.createElement('div'); 
         div.className = 'list-song';
         div.innerHTML = song.title;
         div.onclick = function() {
@@ -263,13 +263,13 @@ Player.prototype = {
 // Setup our new audio player class and pass it the playlist.
 var player = new Player([
     {
-        title: 'medisi_1',
-        file: 'medisi_1',
+        title: 'medisiaudio_1',
+        file: 'medisiaudio_1',
         howl: null
     },
     {
-        title: 'medisi_2',
-        file: 'medisi_2',
+        title: 'medisiaudio_2',
+        file: 'medisiaudio_2',
         howl: null
     }
 ]);

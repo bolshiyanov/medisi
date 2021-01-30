@@ -264,18 +264,18 @@ Player.prototype = {
 // Setup our new audio player class and pass it the playlist.
 var player = new Player([
     {
-        title: 'medisi_7',
-        file: 'medisi_7',
+        title: 'medisiaudio_7',
+        file: 'medisiaudio_7',
         howl: null
     },
     {
-        title: 'medisi_8',
-        file: 'medisi_8',
+        title: 'medisiaudio_8',
+        file: 'medisiaudio_8',
         howl: null
     },
     {
-        title: 'medisi_9',
-        file: 'medisi_9',
+        title: 'medisiaudio_9',
+        file: 'medisiaudio_9',
         howl: null
     }
 ]);

@@ -262,13 +262,13 @@ Player.prototype = {
 // Setup our new audio player class and pass it the playlist.
 var player = new Player([
     {
-        title: 'medisi_5',
-        file: 'medisi_5',
+        title: 'medisiaudio_5',
+        file: 'medisiaudio_5',
         howl: null
     },
     {
-        title: 'medisi_6',
-        file: 'medisi_6',
+        title: 'medisiaudio_6',
+        file: 'medisiaudio_6',
         howl: null
     }
 ]);
