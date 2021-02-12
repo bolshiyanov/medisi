@@ -24,6 +24,35 @@ h1 {
     font-family: "Duru Sans",sans-serif;
 }
 
+h2 {
+    text-align: center;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: .9;
+    margin-bottom: 6px;
+    margin-top: 0;
+    font-family: "Duru Sans",sans-serif;
+}
+
+h4 {
+    text-align: center;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: .9;
+    margin-bottom: 6px;
+    margin-top: 0;
+    font-family: "Duru Sans",sans-serif;
+}
+
+.dev-popup{
+background-color: darkgray;
+border: 1px solid black;
+width: 400px;
+margin: 0 auto;
+}
+
 p {
     text-align: center;
     padding: 0 24px;
