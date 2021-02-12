@@ -261,7 +261,7 @@ Player.prototype = {
     }
 };
 
-// Setup our new audio player class and pass it the playlist.
+// Trecks for all users.
 var player = new Player([
     {
         title: 'medisiaudio_7',
@@ -279,6 +279,25 @@ var player = new Player([
         howl: null
     }
 ]);
+
+// Trecks for PREMIUM users.
+// var player = new Player([
+//     {
+//         title: 'medisipremium_7',
+//         file: 'medisipremium_7',
+//         howl: null
+//     },
+//     {
+//         title: 'medisipremium_8',
+//         file: 'medisipremium_8',
+//         howl: null
+//     },
+//     {
+//         title: 'medisipremium_9',
+//         file: 'medisipremium_9',
+//         howl: null
+//     }
+// ]);
 
 // Bind our player controls.
 playBtn.addEventListener('click', function() {
