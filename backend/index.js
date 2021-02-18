@@ -56,8 +56,18 @@ app.get("/admin/users", async(req, res) => {
 app.post("/webhook", async (req,res) => {
     console.log(req.body);
     if (req.body.Email){
+        let expire_date = moment(req.body.date);
+        if (req.body.itemName == "MediSi 1 неделя"){
+            expire_date.add(1, 'weeks');
+        } else if (req.body.itemName == "MediSi 1 месяц"){
+            expire_date.add(1, 'months');
+        } else if (req.body.itemName == "MediSi 1 квартал"){
+            expire_date.add(3, 'months');
+        } else if (req.body.itemName == "MediSi 1 год"){
+            expire_date.add(1, 'years');
+        }
         const user = await db.Users.get_by_email(req.body.Email);
-        await db.Users.update({ _id: user._id, setter: { expire_date: (moment(req.body.date)).toISOString() }});
+        await db.Users.update({ _id: user._id, setter: { expire_date: expire_date.toISOString() }});
         res.json({success: true});
     } else res.json({success: false});
 })
