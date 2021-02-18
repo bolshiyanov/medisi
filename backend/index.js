@@ -55,7 +55,7 @@ app.get("/admin/users", async(req, res) => {
 
 app.post("/webhook", async (req,res) => {
     console.log(req.body);
-    if (req.body.Email){
+    if (req.body['e-mail']){
         let expire_date = moment(req.body.date);
         if (req.body.itemName == "MediSi 1 неделя"){
             expire_date.add(1, 'weeks');
