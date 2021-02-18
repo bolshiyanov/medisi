@@ -4,6 +4,7 @@ const logger = require("morgan");
 const jwt = require('jsonwebtoken');
 const moment = require("moment");
 const cors = require("cors");
+const path = require("path");
 
 const db = require("./db");
 const config = require("./config");
@@ -12,6 +13,7 @@ const { formatDate, generateAccessToken } = require("./utils");
 const app = express();
 
 app.use(cors({ origin: "*" }));
+app.use(express.static(path.join(__dirname, "../frontend_1")));
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
