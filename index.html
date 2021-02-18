@@ -48,7 +48,7 @@
       <div class="dev-popup">
         <h2>Здесь будет попап</h2>
         <p>Email: <input type="email" name="login" class="email"></p>
-        <h4>До окончания премиум тарифа </br>у вас осталось: ХХХ дней</h4>
+        <h4>Премиум тариф оплачен до: <span id="expire-date">XXX</span></h4>
         <p><button type="button" name="show_more" class="subscribe-button" data-option="3a877d9797edf59">Подписка на
             год</button></p>
         <p><button type="button" name="show_more" class="subscribe-button" data-option="e481fd256c12b81">Подписка на
@@ -110,6 +110,12 @@
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <script>
     const host = "https://medisi.one";
+    if (localStorage.getItem('_expire_date')) {
+      $('#expire-date').text(localStorage.getItem('_expire_date'))
+    }
+    if (localStorage.getItem('_email')) {
+      $('.email').val(localStorage.getItem('_email'))
+    }
     jQuery(".subscribe-button").click(function () {
       const token_storage = localStorage.getItem('_token');
       const email_storage = localStorage.getItem('_email');
