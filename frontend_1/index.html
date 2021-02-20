@@ -47,18 +47,28 @@
       <!-- здесь будет ПОПАП а пока поля инпута в хардкоде -->
       <div class="dev-popup">
         <h2>Здесь будет попап</h2>
-        <p>Email: <input type="email" name="login" class="email"></p>
-        <h4>Премиум тариф оплачен до: <span id="expire-date">XXX</span></h4>
-        <p><button type="button" name="show_more" class="subscribe-button" data-option="3a877d9797edf59">Подписка на
-            год</button></p>
-        <p><button type="button" name="show_more" class="subscribe-button" data-option="e481fd256c12b81">Подписка на
-            квартал</button></p>
-        <p><button type="button" name="show_more" class="subscribe-button" data-option="569abe05dd0e2f9">Подписка на
-            месяц</button></p>
-        <p><button type="button" name="show_more" class="subscribe-button" data-option="f07d58538bf14d2">Подписка на
-            неделю</button></p>
-        </br>
-        <p><button type="button" name="show_more"
+        <p style="margin-bottom: 0px;">Email: <input type="email" name="login" class="email"></p>
+        <p style="margin-bottom: 10px;">
+          <button type="button" name="show_more" class="login-button" style="display: none;">Войти</button>
+          <button type="button" name="show_more" class="exit-button" style="display: none;">Выйти</button>
+        </p>
+        <h4 style="display: none;" class="date_block">Премиум тариф оплачен до: <span id="expire-date">XXX</span></h4>
+        <div style="display: none;" class="buttons_block">
+          <p><button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+              data-option="3a877d9797edf59">Подписка на
+              год</button></p>
+          <p><button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+              data-option="e481fd256c12b81">Подписка на
+              квартал</button></p>
+          <p><button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+              data-option="569abe05dd0e2f9">Подписка на
+              месяц</button></p>
+          <p><button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+              data-option="f07d58538bf14d2">Подписка на
+              неделю</button></p>
+          </br>
+        </div>
+        <p><button type="button" name="show_more" class="buttons_block-button_unsub" style="display: none;"
             onclick="location.href='https://medisi.ainox.pro/unsubscribe'">Отказаться от подписки</button></p>
       </div>
       <!-- Кнопка пше -->
@@ -124,6 +134,9 @@
           localStorage.setItem('_token', response.token || "");
           localStorage.setItem('_expire_date', response.expire_date || "");
           console.log(response);
+          jQuery(".exit-button").show();
+          jQuery(".buttons_block").show();
+          jQuery(".buttons_block-button_unsub").show();
         },
         error: function (response) {
           console.log(1)
@@ -131,12 +144,49 @@
         }
       });
     }
+    else if (!localStorage.getItem('_token') && new Date(localStorage.getItem('_expire_date')) <= new Date()) {
+      jQuery(".buttons_block").show();
+      jQuery(".buttons_block-button").show();
+      jQuery(".login-button").show();
+    }
     if (localStorage.getItem('_expire_date')) {
       jQuery('#expire-date').text(new Date(localStorage.getItem('_expire_date')).toLocaleDateString())
+      jQuery(".date_block").show();
     }
     if (localStorage.getItem('_email')) {
       jQuery('.email').val(localStorage.getItem('_email'))
     }
+
+    jQuery(".exit-button").click(function () {
+      localStorage.clear();
+      location.reload();
+    })
+
+    jQuery(".login-button").click(function () {
+      const token_storage = localStorage.getItem('_token');
+      const email = jQuery(".email").val();
+      if (email) {
+        jQuery.ajax({
+          url: host + "/user/get",
+          type: "POST",
+          data: {
+            email: email,
+          },
+          success: function (response) {
+            localStorage.setItem('_id', response._id || "");
+            localStorage.setItem('_email', response.email || "");
+            localStorage.setItem('_token', response.token || "");
+            localStorage.setItem('_expire_date', response.expire_date || "");
+            console.log(response);
+            location.reload();
+          },
+          error: function (response) {
+            console.log(1)
+            console.log(response);
+          }
+        });
+      }
+    })
     jQuery(".subscribe-button").click(function () {
       const token_storage = localStorage.getItem('_token');
       const email_storage = localStorage.getItem('_email');

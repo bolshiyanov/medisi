@@ -47,91 +47,96 @@
       <!-- здесь будет ПОПАП а пока поля инпута в хардкоде -->
       <div class="dev-popup">
         <h2>Здесь будет попап</h2>
-        <p>Email: <input type="email" name="login" class="email"></p>
-        <p><button type="button" name="show_more" class="login-button">Использовать этот Email</button></p>
-        <h4>Премиум тариф оплачен до: <span id="expire-date">XXX</span></h4>
-        <div style="font-size: 12px; text-align: center; margin-bottom: 15px;">
-          <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
-            <input type="hidden" name="receiver" value="410015237072018">
-            <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на год">
-            <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на год">
+        <p style="margin-bottom: 0px;">Email: <input type="email" name="login" class="email"></p>
+        <p style="margin-bottom: 10px;">
+          <button type="button" name="show_more" class="login-button" style="display: none;">Войти</button>
+          <button type="button" name="show_more" class="exit-button" style="display: none;">Выйти</button>
+        </p>
+        <h4 style="display: none;" class="date_block">Премиум тариф оплачен до: <span id="expire-date">XXX</span></h4>
+        <div style="display: none;" class="buttons_block">
+          <div style="font-size: 12px; text-align: center; margin-bottom: 15px;">
+            <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
+              <input type="hidden" name="receiver" value="410015237072018">
+              <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на год">
+              <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на год">
 
-            <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум на 1 год"}'>
-            <input type="text" class="label-email-value-pod" style="display: none;" required>
+              <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум на 1 год"}'>
+              <input type="text" class="label-email-value-pod" style="display: none;" required>
 
-            <input type="hidden" name="quickpay-form" value="small">
-            <input type="hidden" name="targets" value="Medisi: Премиум доступ на год">
-            <input type="hidden" name="sum" value="2" data-type="number">
-            <input type="hidden" name="need-fio" value="false">
-            <input type="hidden" name="need-email" value="false">
-            <input type="hidden" name="need-phone" value="false">
-            <input type="hidden" name="need-address" value="false">
-            <input type="hidden" name="paymentType" value="AC">
-            <input type="hidden" name="successURL" value="https://pro.medisi.one">
-            <input type="submit" value="Приобрести премиум доступ на год">
-          </form>
-        </div>
-        <div style="font-size: 12px; text-align: center; margin-bottom: 15px;">
-          <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
-            <input type="hidden" name="receiver" value="410015237072018">
-            <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на квартал">
-            <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на квартал">
+              <input type="hidden" name="quickpay-form" value="small">
+              <input type="hidden" name="targets" value="Medisi: Премиум доступ на год">
+              <input type="hidden" name="sum" value="2" data-type="number">
+              <input type="hidden" name="need-fio" value="false">
+              <input type="hidden" name="need-email" value="false">
+              <input type="hidden" name="need-phone" value="false">
+              <input type="hidden" name="need-address" value="false">
+              <input type="hidden" name="paymentType" value="AC">
+              <input type="hidden" name="successURL" value="https://pro.medisi.one">
+              <input type="submit" value="Приобрести премиум доступ на год">
+            </form>
+          </div>
+          <div style="font-size: 12px; text-align: center; margin-bottom: 15px;">
+            <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
+              <input type="hidden" name="receiver" value="410015237072018">
+              <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на квартал">
+              <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на квартал">
 
-            <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум 3 месяца"}'>
-            <input type="text" class="label-email-value-pod" style="display: none;" required>
+              <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум 3 месяца"}'>
+              <input type="text" class="label-email-value-pod" style="display: none;" required>
 
-            <input type="hidden" name="quickpay-form" value="small">
-            <input type="hidden" name="targets" value="Medisi: Премиум доступ на квартал">
-            <input type="hidden" name="sum" value="2" data-type="number">
-            <input type="hidden" name="need-fio" value="false">
-            <input type="hidden" name="need-email" value="false">
-            <input type="hidden" name="need-phone" value="false">
-            <input type="hidden" name="need-address" value="false">
-            <input type="hidden" name="paymentType" value="AC">
-            <input type="hidden" name="successURL" value="https://pro.medisi.one">
-            <input type="submit" value="Приобрести премиум доступ на квартал">
-          </form>
-        </div>
-        <div style="font-size: 12px; text-align: center; margin-bottom: 15px;">
-          <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
-            <input type="hidden" name="receiver" value="410015237072018">
-            <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на месяц">
-            <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на месяц">
+              <input type="hidden" name="quickpay-form" value="small">
+              <input type="hidden" name="targets" value="Medisi: Премиум доступ на квартал">
+              <input type="hidden" name="sum" value="2" data-type="number">
+              <input type="hidden" name="need-fio" value="false">
+              <input type="hidden" name="need-email" value="false">
+              <input type="hidden" name="need-phone" value="false">
+              <input type="hidden" name="need-address" value="false">
+              <input type="hidden" name="paymentType" value="AC">
+              <input type="hidden" name="successURL" value="https://pro.medisi.one">
+              <input type="submit" value="Приобрести премиум доступ на квартал">
+            </form>
+          </div>
+          <div style="font-size: 12px; text-align: center; margin-bottom: 15px;">
+            <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
+              <input type="hidden" name="receiver" value="410015237072018">
+              <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на месяц">
+              <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на месяц">
 
-            <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум 1 месяц"}'>
-            <input type="text" class="label-email-value-pod" style="display: none;" required>
-            <input type="hidden" name="quickpay-form" value="small">
-            <input type="hidden" name="targets" value="Medisi: Премиум доступ на месяц">
-            <input type="hidden" name="sum" value="2" data-type="number">
-            <input type="hidden" name="need-fio" value="false">
-            <input type="hidden" name="need-email" value="false">
-            <input type="hidden" name="need-phone" value="false">
-            <input type="hidden" name="need-address" value="false">
-            <input type="hidden" name="paymentType" value="AC">
-            <input type="hidden" name="successURL" value="https://pro.medisi.one">
-            <input type="submit" value="Приобрести премиум доступ на месяц">
-          </form>
-        </div>
-        <div style="font-size: 12px; text-align: center;">
-          <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
-            <input type="hidden" name="receiver" value="410015237072018">
-            <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на неделю">
-            <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на неделю">
+              <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум 1 месяц"}'>
+              <input type="text" class="label-email-value-pod" style="display: none;" required>
+              <input type="hidden" name="quickpay-form" value="small">
+              <input type="hidden" name="targets" value="Medisi: Премиум доступ на месяц">
+              <input type="hidden" name="sum" value="2" data-type="number">
+              <input type="hidden" name="need-fio" value="false">
+              <input type="hidden" name="need-email" value="false">
+              <input type="hidden" name="need-phone" value="false">
+              <input type="hidden" name="need-address" value="false">
+              <input type="hidden" name="paymentType" value="AC">
+              <input type="hidden" name="successURL" value="https://pro.medisi.one">
+              <input type="submit" value="Приобрести премиум доступ на месяц">
+            </form>
+          </div>
+          <div style="font-size: 12px; text-align: center;">
+            <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
+              <input type="hidden" name="receiver" value="410015237072018">
+              <input type="hidden" name="formcomment" value="Medisi: Премиум доступ на неделю">
+              <input type="hidden" name="short-dest" value="Medisi: Премиум доступ на неделю">
 
-            <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум 1 неделя"}'>
-            <input type="text" class="label-email-value-pod" style="display: none;" required>
+              <input type="hidden" name="label" class="label-email-value" value='{"label": "MediSi Премиум 1 неделя"}'>
+              <input type="text" class="label-email-value-pod" style="display: none;" required>
 
-            <input type="hidden" name="quickpay-form" value="small">
-            <input type="hidden" name="targets" value="Medisi: Премиум доступ на неделю">
-            <input type="hidden" name="sum" value="2" data-type="number">
-            <input type="hidden" name="need-fio" value="false">
-            <input type="hidden" name="need-email" value="false">
-            <input type="hidden" name="need-phone" value="false">
-            <input type="hidden" name="need-address" value="false">
-            <input type="hidden" name="paymentType" value="AC">
-            <input type="hidden" name="successURL" value="https://pro.medisi.one">
-            <input type="submit" value="Приобрести премиум доступ на неделю">
-          </form>
+              <input type="hidden" name="quickpay-form" value="small">
+              <input type="hidden" name="targets" value="Medisi: Премиум доступ на неделю">
+              <input type="hidden" name="sum" value="2" data-type="number">
+              <input type="hidden" name="need-fio" value="false">
+              <input type="hidden" name="need-email" value="false">
+              <input type="hidden" name="need-phone" value="false">
+              <input type="hidden" name="need-address" value="false">
+              <input type="hidden" name="paymentType" value="AC">
+              <input type="hidden" name="successURL" value="https://pro.medisi.one">
+              <input type="submit" value="Приобрести премиум доступ на неделю">
+            </form>
+          </div>
         </div>
         </br>
       </div>
@@ -204,9 +209,14 @@
           console.log(response);
         }
       });
+      jQuery(".exit-button").show();
+    } else if (!localStorage.getItem('_token') || new Date(localStorage.getItem('_expire_date')) <= new Date()) {
+      jQuery(".buttons_block").show();
+      jQuery(".login-button").show();
     }
     if (localStorage.getItem('_expire_date')) {
       jQuery('#expire-date').text(new Date(localStorage.getItem('_expire_date')).toLocaleDateString())
+      jQuery(".date_block").show();
     }
     if (localStorage.getItem('_email')) {
       jQuery('.email').val(localStorage.getItem('_email'));
@@ -216,6 +226,10 @@
       jQuery('.label-email-value').val(JSON.stringify(prev_val));
       jQuery('.label-email-value-pod').val(localStorage.getItem('_email'));
     }
+    jQuery(".exit-button").click(function () {
+      localStorage.clear();
+      location.reload();
+    })
     jQuery(".login-button").click(function () {
       const token_storage = localStorage.getItem('_token');
       const email = jQuery(".email").val();
@@ -236,6 +250,7 @@
             jQuery('.label-email-value').val(JSON.stringify(prev_val));
             jQuery('.label-email-value-pod').val(localStorage.getItem('_email'));
             console.log(response);
+            location.reload();
           },
           error: function (response) {
             console.log(1)
