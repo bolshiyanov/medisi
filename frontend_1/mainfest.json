@@ -1,0 +1,144 @@
+{
+    "dir": "ltr",
+    "lang": "ru",
+    "name": "Medisi",
+    "short_name": "Medisi",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://medisi.one/",
+    "background_color": "#4F9CBB",
+    "theme_color": "transparent",
+    "description": "Приложение для прослушивания медитаций MEDISI для улучшения сна и привличения денег",
+    "orientation": "any",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64"
+        },
+        {
+            "src": "logospwa/logo44",
+            "sizes": "44x44",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo48",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo1240_600",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo300",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo150",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo88",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo24",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo50",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo620_300",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo192",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo144",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo96",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo72",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo36",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo1024",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo180",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo152",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo120",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo76",
+            "sizes": "76x76",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/logo32",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "url": "https://medisi.one",
+    "screenshots": [
+        {
+            "src": "logospwa/screenshot_1_1280_800",
+            "sizes": "1280x800",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/screenshot_1_750_1334",
+            "sizes": "750x1334",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/screenshot_2_1280_800",
+            "sizes": "1280x800",
+            "type": "image/png"
+        },
+        {
+            "src": "logospwa/screenshot_2_750_1334",
+            "sizes": "750x1334",
+            "type": "image/png"
+        }
+    ]
+}
