@@ -18,6 +18,10 @@
   <title>Medisi</title>
   <meta name="description"
     content="Приложение для прослушивания медитаций MEDISI для улучшения сна и привличения денег">
+  <script type="module" src="pwabuilder-sw.js"></script>
+  <script>
+    navigator.serviceWorker.register("pwabuilder-sw.js");
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"></script>
@@ -444,11 +448,7 @@
     </div>
   </div>
   <!-- <div class="card-deck" id="promo"></div> -->
-  <script type="module" src="pwabuilder-sw.js"></script>
 
-  <script>
-    navigator.serviceWorker.register("pwabuilder-sw.js");
-  </script>
   <script src="plugins/base.js"></script>
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <script>
