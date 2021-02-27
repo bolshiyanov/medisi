@@ -1,36 +1,79 @@
-/**
- * Welcome to your Workbox-powered service worker!
- *
- * You'll need to register this file in your web app and you should
- * disable HTTP caching for this file too.
- * See https://goo.gl/nhQhGp
- *
- * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox build configuration
- * and re-run your build process.
- * See https://goo.gl/2aRDsh
- */
+//remember to increment the version # when you update the service worker
+const version = "1.00",
+    preCache = "PRECACHE-" + version,
+    cacheList = [ "/" ];
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+/*
+create a list (array) of urls to pre-cache for your application
+*/
 
+/*  Service Worker Event Handlers */
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
+self.addEventListener( "install", function ( event ) {
+
+    console.log( "Installing the service worker!" );
+
     self.skipWaiting();
-  }
-});
 
-workbox.core.clientsClaim();
+    caches.open( preCache )
+        .then( cache => {
 
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
-self.__precacheManifest = [].concat(self.__precacheManifest || []);
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+            cache.addAll( cacheList );
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/index.html"), {
-  
-  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
-});
+        } );
+
+} );
+
+self.addEventListener( "activate", function ( event ) {
+
+    event.waitUntil(
+
+        //wholesale purge of previous version caches
+        caches.keys().then( cacheNames => {
+            cacheNames.forEach( value => {
+
+                if ( value.indexOf( version ) < 0 ) {
+                    caches.delete( value );
+                }
+
+            } );
+
+            console.log( "service worker activated" );
+
+            return;
+
+        } )
+
+    );
+
+} );
+
+self.addEventListener( "fetch", function ( event ) {
+
+    event.respondWith(
+
+        fetch( event.request )
+
+        /* check the cache first, then hit the network */
+        /*
+                caches.match( event.request )
+                .then( function ( response ) {
+
+                    if ( response ) {
+                        return response;
+                    }
+
+                    return fetch( event.request );
+                } )
+        */
+    );
+
+} );
+
+
+/* service worker resources
+
+https: //love2dev.com/blog/what-is-the-service-worker-cache-storage-limit/
+https: //love2dev.com/blog/service-worker-cache/
+
+*/
