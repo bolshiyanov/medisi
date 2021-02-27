@@ -2,795 +2,793 @@
 <html lang="en">
 
 <head>
-    <title>Medisi</title>
-<meta name="description" content="Приложение для медитаций">
+  <title>Medisi</title>
+  <meta name="description" content="Приложение для медитаций">
 
-<link href="css/addtohomescreen.css" rel="stylesheet">
+  <link href="css/addtohomescreen.css" rel="stylesheet">
 
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="application-name" content="Medisi">
-<meta name="apple-mobile-web-app-title" content="Medisi">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Medisi">
+  <meta name="apple-mobile-web-app-title" content="Medisi">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<link rel="apple-touch-icon" href="meta/ios/ios-appicon-120-120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="meta/ios/ios-appicon-152-152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="meta/ios/ios-appicon-180-180.png">
-<link rel="apple-touch-icon" sizes="120x120" href="meta/ios/ios-appicon-120-120.png">
-<link href="meta/ios/apple-touch-startup-image-320x460.png" media="(device-width: 320px)"
+  <link rel="apple-touch-icon" href="meta/ios/ios-appicon-120-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="meta/ios/ios-appicon-152-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="meta/ios/ios-appicon-180-180.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="meta/ios/ios-appicon-120-120.png">
+  <link href="meta/ios/apple-touch-startup-image-320x460.png" media="(device-width: 320px)"
     rel="apple-touch-startup-image">
-<!-- iPhone (Retina) SPLASHSCREEN-->
-<link href="meta/ios/apple-touch-startup-image-640x920.png"
+  <!-- iPhone (Retina) SPLASHSCREEN-->
+  <link href="meta/ios/apple-touch-startup-image-640x920.png"
     media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-<!-- iPad (portrait) SPLASHSCREEN-->
-<link href="meta/ios/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)"
+  <!-- iPad (portrait) SPLASHSCREEN-->
+  <link href="meta/ios/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)"
     rel="apple-touch-startup-image">
-<!-- iPad (landscape) SPLASHSCREEN-->
-<link href="meta/ios/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)"
-    rel="apple-touch-startup-image">
-<!-- iPad (Retina, portrait) SPLASHSCREEN-->
-<link href="meta/ios/apple-touch-startup-image-1536x2008.png"
+  <!-- iPad (landscape) SPLASHSCREEN-->
+  <link href="meta/ios/apple-touch-startup-image-748x1024.png"
+    media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+  <!-- iPad (Retina, portrait) SPLASHSCREEN-->
+  <link href="meta/ios/apple-touch-startup-image-1536x2008.png"
     media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
     rel="apple-touch-startup-image">
-<!-- iPad (Retina, landscape) SPLASHSCREEN-->
-<link href="meta/ios/apple-touch-startup-image-2048x1496.png"
+  <!-- iPad (Retina, landscape) SPLASHSCREEN-->
+  <link href="meta/ios/apple-touch-startup-image-2048x1496.png"
     media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
     rel="apple-touch-startup-image">
-<!-- iPhone 6/7/8 -->
-<link href="/meta/ios/apple-touch-startup-image-750x1334.png"
+  <!-- iPhone 6/7/8 -->
+  <link href="/meta/ios/apple-touch-startup-image-750x1334.png"
     media="(device-width: 375px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-<!-- iPhone 6 Plus/7 Plus/8 Plus -->
-<link href="/meta/ios/apple-touch-startup-image-1242x2208.png"
+  <!-- iPhone 6 Plus/7 Plus/8 Plus -->
+  <link href="/meta/ios/apple-touch-startup-image-1242x2208.png"
     media="(device-width: 414px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
 
-<meta name="msapplication-starturl" content="https://medisi.one/">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="msapplication-starturl" content="https://medisi.one/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link href="favicon.png" rel="shortcut icon">
-<link rel="icon" type="image/png" href="meta/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="meta/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="meta/favicon-96x96.png" sizes="96x96">
+  <link href="favicon.png" rel="shortcut icon">
+  <link rel="icon" type="image/png" href="meta/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="meta/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="meta/favicon-96x96.png" sizes="96x96">
 
-<meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#000000">
 
-<link rel="manifest" href="manifest.json">
-<meta name="generator" content="PWA Starter">
+  <link rel="manifest" href="manifest.json">
+  <meta name="generator" content="PWA Starter">
 
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-    <div class="app">
-        <div class="app-container">
-            <div id="header" class="header-dilimetr"></div>
-            <!-- Хедер -->
-            <div class="header">
-                <div class="header-box">
-                    <div class="header-box-logo" style="background-image: URL(images/medisilogo.png)"></div>
-                    <div class="header-box-name">MediSi</div>
-                </div>
+  <div class="app">
+    <div class="app-container">
+      <div id="header" class="header-dilimetr"></div>
+      <!-- Хедер -->
+      <div class="header">
+        <div class="header-box">
+          <div class="header-box-logo" style="background-image: URL(images/medisilogo.png)"></div>
+          <div class="header-box-name">MediSi</div>
+        </div>
+      </div>
+      <!-- Карусель медитаций -->
+      <div class="carousel">
+        <div class="carousel-card">
+          <div class="carousel-card-item" onclick="location.href='./player1.html';">
+            <div class="carousel-card-item-image" style="background-image: URL(images/sleep.jpg)"></div>
+            <div class="carousel-card-item-title">Истории</div>
+          </div>
+          <div class="carousel-card-item" onclick="location.href='./player2.html';">
+            <div class="carousel-card-item-image" style="background-image: URL(images/health.jpg)"></div>
+            <div class="carousel-card-item-title">Здоровье</div>
+          </div>
+          <div class="carousel-card-item" onclick="location.href='./player3.html';">
+            <div class="carousel-card-item-image" style="background-image: URL(images/abundance.jpg)"></div>
+            <div class="carousel-card-item-title">Изобилие</div>
+          </div>
+          <div class="carousel-card-item" onclick="location.href='./player4.html';">
+            <div class="carousel-card-item-image" style="background-image: URL(images/relationships.jpg)">
             </div>
-            <!-- Карусель медитаций -->
-            <div class="carousel">
-                <div class="carousel-card">
-                    <div class="carousel-card-item" onclick="location.href='./player1.html';">
-                        <div class="carousel-card-item-image" style="background-image: URL(images/sleep.jpg)"></div>
-                        <div class="carousel-card-item-title">Истории</div>
-                    </div>
-                    <div class="carousel-card-item" onclick="location.href='./player2.html';">
-                        <div class="carousel-card-item-image" style="background-image: URL(images/health.jpg)"></div>
-                        <div class="carousel-card-item-title">Здоровье</div>
-                    </div>
-                    <div class="carousel-card-item" onclick="location.href='./player3.html';">
-                        <div class="carousel-card-item-image" style="background-image: URL(images/abundance.jpg)"></div>
-                        <div class="carousel-card-item-title">Изобилие</div>
-                    </div>
-                    <div class="carousel-card-item" onclick="location.href='./player4.html';">
-                        <div class="carousel-card-item-image" style="background-image: URL(images/relationships.jpg)">
-                        </div>
-                        <div class="carousel-card-item-title">Любовь</div>
-                    </div>
-                </div>
-            </div>
+            <div class="carousel-card-item-title">Любовь</div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Кнопка подписки -->
-            <div class="box-button-subscriptions">
-                <a href="#popup" class="button-subscriptions">ВАШИ ПОДПИСКИ</a>
-            </div>
-            <!-- <div class="subscriptions">
+      <!-- Кнопка подписки -->
+      <div class="box-button-subscriptions">
+        <a href="#popup" class="button-subscriptions">ВАШИ ПОДПИСКИ</a>
+      </div>
+      <!-- <div class="subscriptions">
             <div class="subscriptions-button" onclick="location.href='https://medisi.ainox.pro/#catalog'; target='_blank'; rel='noopener noreferrer'"><SPAN>ВАШИ ПОДПИСКИ</SPAN></div>
           </div> -->
-            <!-- Карусель коллекций -->
-            <div class="carousel">
-                <div class="carousel-card">
-                    <div class="carousel-promo-item">
-                        <div class="carousel-card-item-image" style="background-image: URL(images/relationships.jpg)">
-                        </div>
-                        <!-- <div class="carousel-promo-item-title">Сборник медитаций для улучшения отношений</div> -->
-                    </div>
-                    <div class="carousel-promo-item">
-                        <div class="carousel-card-item-image" style="background-image: URL(images/abundance.jpg)"></div>
-                        <!-- <div class="carousel-promo-item-title">Сборник медитаций на привличение изобилия</div> -->
-                    </div>
-                    <div class="carousel-promo-item">
-                        <div class="carousel-card-item-image" style="background-image: URL(images/health.jpg)"></div>
-                        <!-- <div class="carousel-promo-item-title">Сборник медитаций для оздоровления</div> -->
-                    </div>
-                    <!-- <div class="carousel-promo-item">
+      <!-- Карусель коллекций -->
+      <div class="carousel">
+        <div class="carousel-card">
+          <div class="carousel-promo-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/relationships.jpg)">
+            </div>
+            <!-- <div class="carousel-promo-item-title">Сборник медитаций для улучшения отношений</div> -->
+          </div>
+          <div class="carousel-promo-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/abundance.jpg)"></div>
+            <!-- <div class="carousel-promo-item-title">Сборник медитаций на привличение изобилия</div> -->
+          </div>
+          <div class="carousel-promo-item">
+            <div class="carousel-card-item-image" style="background-image: URL(images/health.jpg)"></div>
+            <!-- <div class="carousel-promo-item-title">Сборник медитаций для оздоровления</div> -->
+          </div>
+          <!-- <div class="carousel-promo-item">
                 <div class="carousel-card-item-image" style="background-image: URL(images/sleep.jpg); background-position: center;"></div>
                 <div class="carousel-promo-item-title">Сборник медитаций для релакса и сна</div>
               </div> -->
-                </div>
-            </div>
-            <!-- Заголовок -->
-            <h1>Medisi</h1>
-            <p>Медитация - это путь к новым горизонтам вашего сознания</p>
-            <div id="share"></div>
-            <div id="pwaInstall"></div>
-            <!-- Футер -->
-            <div class="footer">
-                <div class="footer-box">
-                    <div class="footer-name">MediSi</div>
-                    <div class="footer-pwa">
-                        <ion-icon size="large" name="logo-pwa"></ion-icon>
-                        <ion-icon name="logo-apple"></ion-icon>
-                        <ion-icon name="logo-android"></ion-icon>
-                        <ion-icon name="logo-windows"></ion-icon>
-                    </div>
-                    <div class="footer-sweety">TRY®SWEETY 2021</div>
-                </div>
-            </div>
         </div>
-    </div>
-
-    <!-- здесь будет ПОПАП а пока поля инпута в хардкоде -->
-    <div id="popup" class="popup">
-        <a href="#header" class="popup-area"></a>
-        <div class="popup-body">
-            <div class="popup-content">
-                <a href="#header" class="popup-close">
-                    <ion-icon size="large" name="close-circle-outline"></ion-icon>
-                </a>
-                <h3>ВЫБЕРИТЕ ПОДХОДЯЩИЙ ТАРИФНЫЙ ПЛАН, ЧТОБЫ ПОЛУЧИТЬ ДОСТУП К ПОЛНОЙ КОЛЛЕКЦИИ</h3>
-                <h4 style="display: none;" class="date_block">Премиум тариф оплачен до: <br /><br /><span
-                        id="expire-date">00:00:00</span>
-                </h4>
-                <p style="margin: 0px; padding: 0; font-size: 18px; font-weight: 600; text-align: left;">ШАГ 1: ВВЕДИТЕ
-                    E-MAIL
-                </p>
-                <input type="email" placeholder="e-mail" name="login" class="email">
-                <div class="input-email-descriptions">Сначала введите свой e-mail, а затем выберите подходящий тариф.
-                    Для
-                    активации оплаченного тарифа необходимо повторно войти в приложение с тем же e-mail!</div>
-                <button type="button" name="show_more" class="login-button" style="display: none;">Войти</button>
-                <button type="button" name="show_more" class="exit-button" style="display: none;">Выйти</button>
-                <div class="input-email-bottomline"></div>
-
-
-                <div style="display: none;" class="buttons_block">
-                    <p style="margin: 0px; padding: 0; font-size: 18px; font-weight: 600; text-align: left;">ШАГ 2:
-                        ВЫБЕРИТЕ ТАРИФ
-                    </p>
-                    <button type="button" name="show_more" class="subscribe-button buttons_block-button"
-                        style="display: none;" data-option="3a877d9797edf59">Подписка на год</button>
-                    <div class="input-email-descriptions">Стоимость подписки на 365 дней составляет 1450 рублей</div>
-                    <button type="button" name="show_more" class="subscribe-button buttons_block-button"
-                        style="display: none;" data-option="e481fd256c12b81">Подписка на квартал</button>
-                    <div class="input-email-descriptions">Стоимость подписки на 90 дней составляет 999 рублей</div>
-                    <button type="button" name="show_more" class="subscribe-button buttons_block-button"
-                        style="display: none;" data-option="569abe05dd0e2f9">Подписка на месяц</button>
-                    <div class="input-email-descriptions">Стоимость подписки на 30 дней составляет 349 рублей</div>
-                    <button type="button" name="show_more" class="subscribe-button buttons_block-button"
-                        style="display: none;" data-option="f07d58538bf14d2">Подписка на неделю</button>
-                    <div class="input-email-descriptions">Стоимость подписки на 7 дней составляет 179 рублей</div>
-                    </br>
-                    <div class="input-email-bottomline"></div>
-                </div>
-                <section class="ac-container">
-                    <div>
-                        <input id="ac-1" name="accordion-1" type="radio" checked />
-                        <label for="ac-1">КОНТАКТЫ</label>
-                        <article style="height: 60px;">
-                            <div class="accordion-content">По всем вопросам обращайтесь на наш e-mail:
-                                <a href="mailto:inna42009@gmail.com" target="_blank"
-                                    rel="noopener noreferrer">inna42009@gmail.com</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div>
-                        <input id="ac-2" name="accordion-1" type="radio" />
-                        <label for="ac-2">ПОЛИТИКА КОНФИДЕЦИАЛЬНОСТИ</label>
-                        <article>
-                            <div class="accordion-content">Утверждена Приказом № 1 от 12.01.2021
-                                «Об утверждении Политики конфиденциальности Приложения MideSi»
-
-
-                                Политика конфиденциальности мобильного приложения MideSi
-
-                                1. Общие положения
-                                1.1.Настоящая политика конфиденциальности для мобильного приложения (далее – Политика)
-                                действует в
-                                отношении той информации, которую Индивидуальный предприниматель Спицына Инна Сергеевна
-                                (ИНН
-                                343705371885 ОГРНИП 315345600005465, юридический адрес: 403302 Волгоградская обл., с.
-                                Староселье, ул.
-                                Украинская, д. 39 б) (далее – Компания, Мы) может получить с устройства пользователя во
-                                время
-                                использования им мобильного приложения MideSi (далее – Приложение).
-                                1.2.Использование Приложения означает безоговорочное согласие Пользователя с настоящей
-                                Политикой и
-                                указанными в ней условиями обработки информации, получаемой с устройства пользователя. В
-                                случае
-                                несогласия с Политикой пользователь должен воздержаться от использования Приложения.
-                                1.3.Настоящая Политика конфиденциальности составлена в соответствии с требованиями
-                                Федерального закона
-                                «О персональных данных» и определяет порядок обработки персональных данных и меры по
-                                обеспечению
-                                безопасности персональных данных, предпринимаемые Компанией. Оператор ставит своей
-                                важнейшей целью и
-                                условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина
-                                при обработке
-                                его персональных данных, в том числе защиты прав на неприкосновенность частной жизни,
-                                личную и семейную
-                                тайну.
-                                1.4.Настоящая Политика конфиденциальности Приложения действует в отношении всей
-                                информации, которую
-                                Компания может получить о пользователе во время использования им данного Приложения.
-                                1.5. Компания не проверяет достоверность персональной информации, предоставляемой
-                                пользователями, и не
-                                осуществляет контроль за их дееспособностью.
-                                1.6.Компания исходит из того, что информация, переданная им от пользователей, является
-                                достоверной и
-                                поддерживает эту информацию в актуальном состоянии.
-                                1.7.Устанавливая Приложение на свое мобильное устройство, Пользователь дает согласие
-                                Компании на сбор,
-                                обработку, запись, систематизацию, хранение, модификацию, обезличивание, удаление,
-                                изменение,
-                                использование персональных данных Пользователя в целях оказания услуг по договорам,
-                                заключенным между
-                                Пользователем и Компанией.
-
-                                2. Компания может обрабатывать следующую информацию Пользователя
-                                2.1.Компания собирает непосредственно от Вас определенную информацию, которая включает,
-                                помимо прочего,
-                                информацию, которую Вы предоставляете в ответ на вопросы, которые задает Компания. Мы
-                                также собираем
-                                Ваши персональные данные от третьих лиц, такие как информация в Вашем профиле в
-                                социальных сетях,
-                                которые Вы подключаете к мобильному приложению. Также есть определенные данные, которые
-                                мы собираем
-                                автоматически, такие как информация о Вашем устройстве и с какими разделами наших услуг
-                                Вы
-                                взаимодействуете или на использование каких тратите свое время.
-                                2.2.Информация о Вашем устройстве, в том числе модель устройства, версия операционной
-                                системы,
-                                уникальные идентификаторы устройства, а также данные о мобильной сети и номер телефона,
-                                используются для
-                                анализа возможных ошибок в работе Приложения и совершенствования работы Приложения.
-                                2.3.Данные о Пользователе, в том числе фамилия, имя, отчество, адрес, адрес электронной
-                                почты, номер
-                                мобильного телефона, дата рождения, пароль («Данные профиля»), когда Вы настраиваете
-                                свой профиль. Мы
-                                также можем предоставить Вам возможность добавить личную информацию, такую как
-                                фотография, и информацию,
-                                которую Вы можете поместить в раздел «Мои заметки» Приложения.
-                                2.4.Мы пользуемся услугами оператора сторонней платежной системы для обработки платежей,
-                                которые нам
-                                производятся. В связи с обработкой таких платежей мы не сохраняем никакую финансовую
-                                информацию, как,
-                                например, номера кредитных карт.
-                                2.5.Вам может быть предложено заполнить форму или анкету, оставить свой отзыв или
-                                принять участие в
-                                рекламной акции (например, в конкурсе или челлендже) или в контенте, созданном
-                                пользователем (например,
-                                подкасты), либо через Услуги, либо через стороннюю платформу. Если Вы принимаете участие
-                                в подобном, мы
-                                соберем и сохраним данные, которые Вы предоставляете в рамках участия, такие как Ваше
-                                имя, адрес
-                                электронной почты, дата рождения и/или номер телефона. Упомянутые данные являются и
-                                будут подчиняться
-                                правилам настоящей Политики конфиденциальности, за исключением тех случаев, когда
-                                правила рекламной
-                                кампании или другой более строгой политики конфиденциальности, которая также будет
-                                представлена Вашему
-                                вниманию, содержат противоположное или иное правило. При условии Вашего явного согласия,
-                                мы можем
-                                собирать, хранить и размещать Вашу фотографию с целью передачи Ваших отзывов другим
-                                лицам с помощью
-                                Приложения, Веб-сайта, электронного бюллетеня или любым другим способом. Если мы
-                                используем стороннюю
-                                платформу для проведения опроса или рекламной акции, применяется политика
-                                конфиденциальности третьей
-                                стороны.
-                                2.6.Если Вы обращаетесь к нам за поддержкой или сообщаете о проблеме или вопросе
-                                (независимо от того,
-                                создали ли Вы профиль), мы собираем и храним Ваши данные, такие как Ваши контактные
-                                данные, сообщения и
-                                другие данные, включая, помимо прочего, Ваше имя, адрес электронной почты, язык,
-                                местоположение,
-                                операционную систему, IP-адрес и любые другие данные, которые Вы предоставляете или
-                                которые мы собираем
-                                автоматически. Мы используем эти данные, чтобы ответить Вам и изучить Ваш вопрос или
-                                проблему в
-                                соответствии с правилами настоящей Политики конфиденциальности.
-                                2.7.Данные, которые автоматически передаются разработчику в процессе их использования с
-                                помощью
-                                установленного на устройстве приложения, в том числе информация из cookie, информация
-                                обустройстве
-                                Пользователя.
-                                2.8.Данный доступ к функциям устройства необходим для полноценного функционирования
-                                Приложения и не
-                                используется для причинения вреда Пользователю.
-
-
-                                3. Цели сбора и обработки персональной информации пользователей
-                                3.1.Приложение собирает и хранит только те персональные данные, которые необходимы для
-                                предоставления
-                                сервисов, входящих в состав приложения.
-                                3.2.Персональную информацию Пользователя приложения может использовать в следующих
-                                целях:
-                                3.2.1.Идентификации стороны в рамках соглашений;
-                                3.2.2.Предоставления Пользователю информации в рамках Договора, заключенного между
-                                Пользователем и
-                                Компанией;
-                                3.2.3.Предоставление Пользователю персонализированных сервисов;
-                                3.2.4.Связь с Пользователем, в том числе, направление уведомлений, запросов и
-                                информации, касающихся
-                                использования сервисов, оказания услуг, а также обработка запросов и заявок от
-                                Пользователя;
-                                3.2.5.Улучшения качества Приложения, удобства его использования, разработка новых
-                                сервисов и услуг;
-                                3.2.6.Проведение статистических и иных исследований на основе обезличенных данных.
-
-
-                                4.Условия обработки персональной информации Пользователя
-                                4.1.В соответствии с настоящей Политикой Компания осуществляет обработку только той
-                                информации и только
-                                для тех целей, которые определены в п. 3.2. Политики.
-                                4.2.Компания принимает все зависящие от Компании организационные и технические мер для
-                                защиты информации
-                                Пользователя от неправомерного доступа третьих лиц, использования, копирования и
-                                распространения.
-                                4.3.Для целей, изложенных в настоящей Политике, Компания может привлекать к обработке
-                                Информации
-                                Пользователя партнеров, с которыми у Компании заключены соответствующие соглашения о
-                                конфиденциальности.
-                                Передача Компаний партнерам обезличенных данных об использовании Приложения для целей
-                                улучшения работы
-                                Приложения осуществляется на основании договоров с партнерами.
-                                4.4.Данные профиля, системные данные и данные об использовании будут храниться в нашей
-                                защищенной базе
-                                данных в течение 1 (одного) года после удаления Пользователем Приложения или прекращения
-                                членства, для
-                                ускорения процесса и для удобства пользователя в случае, если Пользователь, который
-                                раньше использовал
-                                Приложение, впоследствии пожелает снова начать им пользоваться.
-                                4.5.При обработке персональных данных пользователей Компания руководствуется Федеральным
-                                законом «О
-                                персональных данных».
-
-                                5.Изменение Пользователем персональной информации
-                                5.1.Пользователь может в любой момент изменить (обновить, дополнить) предоставляемую им
-                                персональную
-                                информацию или ее часть, заново заполнив форму Профиля.
-
-                                6.Меры, принимаемые для защиты персональной информации
-                                6.1.Компания принимает все необходимые меры для защиты любых персональных данных,
-                                предоставляемых
-                                Пользователями.
-                                6.2.Доступ к персональным данным имеют только уполномоченные сотрудники Компании,
-                                уполномоченные
-                                сотрудники сторонних компаний (т.е. поставщиков услуг) или иных контрагентов,
-                                подписавшие договор о
-                                конфиденциальности и защите персональных данных.
-                                6.3.Все сотрудники Компании, имеющие доступ к персональным данным, подписывают
-                                соглашения о
-                                неразглашении конфиденциальной информации и должны придерживаться политики по
-                                обеспечению
-                                конфиденциальности и защиты персональных данных.
-                                6.4.В целях обеспечения конфиденциальности информации и защиты персональных данных
-                                Компания принимает
-                                меры, необходимые для предотвращения несанкционированного доступа к данным
-                                Пользователей.
-                                6.5.Пользователи используют Приложение как есть и предпринимают меры по защите своих
-                                персональных данных
-                                в нем от угроз безопасности, в т.ч., но не ограничиваясь:
-                                -защищают свое устройство и установленные в нем Приложения от кражи и утери;
-                                -защищают свое устройство и установленные в нем Приложения от несанкционированного
-                                доступа.
-
-                                7.Изменение Политики конфиденциальности
-                                7.1.Компания имеет право вносить изменения в настоящую Политику конфиденциальности.
-                                7.2.При внесении изменений в актуальной редакции указывается дата последнего обновления.
-                                Новая редакция
-                                Политики конфиденциальности вступает в силу с момента ее размещения в Приложении, если
-                                иное не
-                                предусмотрено новой редакцией Политики.
-
-                                8.Применимое законодательство
-                                8.1.К настоящей Политике и отношениям между Пользователем и Компанией, возникающим в
-                                связи с применением
-                                Политики конфиденциальности, подлежит применению законодательство Российской Федерации.
-
-                                9.Обратная связь
-                                9.1.Вопрсы и предложения по повод настоящей Политики следует сообщать в службу поддержки
-                                пользователей –
-                                inna42009@yandex.ru
-
-
-
-                            </div>
-                        </article>
-                    </div>
-                    <div>
-                        <input id="ac-3" name="accordion-1" type="radio" />
-                        <label for="ac-3">ДОГОВОР ОФЕРТА</label>
-                        <article>
-                            <div class="accordion-content">Договор — публичная оферта
-                                Настоящий публичный договор (далее именуемый по тексту — Договор) определяет порядок
-                                оказания услуг -
-                                медитаций, а также взаимные права, обязанности и порядок взаимоотношений между
-                                Индивидуальным
-                                предпринимателем Спицыной Инной Сергеевной, именуемым в дальнейшем «Продавец» (ИНН
-                                343705371885 ОГРНИП
-                                315345600005465, юридический адрес: 403302 Волгоградская обл., с. Староселье, ул.
-                                Украинская, д. 39 б) и
-                                Заказчиком услуг – физическим лицом, именуемым в дальнейшем «Подписчик», принявшим
-                                (акцептовавшим)
-                                публичное предложение (оферту) о заключении настоящего Договора. Заказчик знакомится с
-                                настоящим
-                                Договором и дает свое согласие на акцепт настоящего Договора в момент оформления и
-                                оплаты услуги.
-
-                                Договор, в соответствии со статьей 435 и частью 2 статьи 437 Гражданского кодекса
-                                Российской Федерации,
-                                является публичной офертой (предложением) в адрес неограниченного числа лиц,
-                                пользователей сети
-                                Интернет.
-
-                                В соответствии со статьей 438 Гражданского Кодекса Российской Федерации, полным и
-                                безоговорочным
-                                акцептом (принятием) Договора является подтверждение Подписчиком своего согласия с
-                                условиями Договора
-                                или осуществление им добровольного платежа.
-                                1. Термины, используемые в договоре
-                                1.1. Подписчик — пользователь сети Интернет, принявший условия Договора, получивший
-                                уникальный
-                                идентификатор в Приложении Продавца и осуществивший авансовый платеж за Использование
-                                Произведений.
-
-                                1.2. . Произведения — аудиозаписи медитаций, музыки и литературных произведений,
-                                представленные в
-                                электронном виде в сети Интернет в различных форматах, размещенные в Приложениях
-                                Продавца
-
-                                1.3. Каталог — совокупность Произведений.
-
-                                1.4. Приложение Продавца — прогрессивный сайт на платформе Medisi.one
-
-                                1.5. Использование — открытие Подписчиком Произведений
-
-                                1.6. Биллинг — система учета платежей.
-
-                                2. Предмет договора
-                                2.1. Продавец предоставляет возможность Подписчику на платной основе открывать
-                                Произведения,
-                                представленные в Каталоге, через мобильное приложение.
-                                3. Обязанности сторон
-                                3.1. Обязанности Продавца
-                                3.1.1. Предоставлять Подписчику возможность Использования Произведений не позднее 24
-                                часов с момента
-                                подтверждения Биллингом произведенной оплаты и идентификации Подписчика как плательщика
-                                произведенного
-                                платежа.
-                                3.1.2. Не разглашать третьим лицам сведения о Подписчике, полученные от Подписчика при
-                                регистрации.
-                                3.1.3. Уведомлять Подписчика об изменениях условий Договора и его Приложений путем
-                                размещения
-                                соответствующей информации на Сайтах Продавца не менее чем за 30 (тридцать) календарных
-                                дней до
-                                вступления изменений в силу.
-                                3.2. Обязанности Подписчика
-                                3.2.1. Зарегистрироваться в Приложении Продавца путём автоматической регистрации по
-                                факту оплаты.
-
-                                3.2.2. Производить оплату за Использование Произведений согласно п.4 Договора.
-
-                                3.2.3. Использовать доступные в Приложении Продавца Произведения исключительно в личных
-                                целях, для
-                                прослушивания.
-
-                                3.2.4. Подписчик не имеет права:
-                                передавать либо рассылать скачанные Произведения третьим лицам как полностью, так и
-                                частично;
-                                сообщать публично Произведения по известным каналам вещания, таким как радио,
-                                телевидение и проч.
-                                воспроизводить Произведения, то есть изготавливать экземпляры Произведений или их частей
-                                в любой
-                                материальной форме, если это воспроизведение имеет цель дальнейшего распространения;
-                                доводить Произведения до всеобщего сведения с использованием сети Интернет и прочих
-                                цифровых сетей;
-                                переделывать, изменять или прочим образом перерабатывать Произведения.
-                                Несоблюдение требований п.3.2.4. Договора является нарушением законодательства об
-                                авторском праве и
-                                преследуется по закону.
-
-                                3.2.5. Вся информация, размещенная на Сайтах Продавца о порядке пользования Каталогом,
-                                оплаты
-                                Произведений и прочих особенностях исполнения Договора является неотъемлемой частью
-                                Договора и
-                                обязательна к исполнению Подписчиком.
-                                4. Условия оплаты
-                                4.1. Подписчик производит авансовый платеж за подписку на условиях, указанных на Сайте
-                                Продавца.
-
-                                4.2. Продавец вправе в одностороннем порядке изменять действующие цены путем размещения
-                                соответствующей
-                                информации на Сайте Продавца. Любое изменение цен не касается уже оплаченных периодов
-                                подписки.
-
-                                4.3. В Приложениях Продавца списание средств происходит автоматически на сумму стоимости
-                                месячной,
-                                недельной, годовой или других периодов подписки по выбранному тарифу не чаще выбранного
-                                периода, в
-                                случае месячной подписки — месяца, в случае недельной подписки — недели.
-                                5. Ответственность сторон
-                                5.1. Подписчик принимает на себя полную ответственность и риски, связанные с
-                                использованием Каталога.
-
-                                5.2. Подписчик полностью несет ответственность за использование третьими лицами своей
-                                учётной записи.
-
-                                5.3. Продавец не несет ответственности за любые расходы Подписчика или прямой либо
-                                косвенный ущерб,
-                                который может быть нанесен Подписчику вследствие использования Каталога.
-
-                                5.4. Продавец нe нeсeт отвeтствeнности за качество доступа к Каталогу через сеть
-                                Интернет.
-
-                                5.5. Ни при каких обстоятельствах Продавец не несет ответственности за использование
-                                третьими лицами
-                                учётной записи Подписчика.
-
-                                5.6. Продавец не несет ответственности за прямой или косвенный ущерб, понесенный
-                                Подписчиком в
-                                результате ошибок передачи данных, сбоев/дефектов в работе программного обеспечения
-                                и/или оборудования,
-                                потерь и повреждений данных, ошибок обработки или отображения данных, задержек в
-                                передаче данных и
-                                других сбоев, случившихся не по вине Продавца.
-                                6. Срок действия договора
-                                6.1. Договор вступает в силу с момента поступления первого авансового платежа от
-                                Подписчика и действует
-                                до полного исполнения Сторонами своих обязательств.
-                                7. Обстоятельства непреодолимой силы
-                                7.1. Стороны освобождаются от ответственности за частичное или полное неисполнение
-                                обязательств по
-                                настоящему Договору в случае, если такое неисполнение явилось прямым следствием
-                                обстоятельств
-                                непреодолимой силы (форс-мажорных обстоятельств), возникших после заключения Договора, в
-                                результате
-                                событий чрезвычайного характера, а именно: пожара, наводнения, урагана и землетрясения
-                                или наложения
-                                органами государственной власти ограничений на деятельность любой из Сторон, и если эти
-                                обстоятельства
-                                Стороны не могли ни предвидеть, ни предотвратить разумными мерами.
-                                8. Прочие условия
-                                8.1. В случае, если какое-либо положение или какая-либо часть положения Договора
-                                признаны
-                                недействительными или не имеющими юридической силы, остальные положения и части
-                                положений Договора
-                                остаются в полной силе и действии.
-
-                                8.2. Все Приложения к настоящему Договору являются его неотъемлемой частью.
-
-                                8.3. Во всем остальном Стороны договорились руководствоваться действующим
-                                законодательством Российской
-                                Федерации.
-
-                                8.4. Продавец вправе вносить изменения в Договор с обязательным размещением
-                                соответствующей информации
-                                на Сайте Продавца за 30 (тридцать) календарных дней до вступления соответствующих
-                                изменений в силу.
-
-                                8.5. По всем возникающим вопросам Подписчик вправе обращаться в Службу поддержки
-                                Продавца по адресу
-                                электронной почте inna42009@yandex.ru
-                                9. Разрешение споров
-                                9.1. Споры и разногласия, которые могут возникнуть по данному Договору, решаются путем
-                                соблюдения
-                                досудебного (претензионного) порядка. Срок рассмотрения Продавцом претензии — 7 (семь)
-                                календарных дней
-                                с момента ее получения от Подписчика.
-
-                                9.2. Если Стороны не придут к соглашению, эти споры и разногласия разрешаются в судебном
-                                порядке
-                                согласно действующему законодательству Российской Федерации.
-                                Продавец: Индивидуальный предприниматель Спицына Инна Сергеевна
-                                ИНН 343705371885, ОГРНИП 315345600005465,
-                                Адрес: 403302 Волгоградская обл., с. Староселье, ул. Украинская, д. 39 б)
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                <p><button type="button" name="show_more" class="buttons_block-button_unsub" style="display: none;"
-                        onclick="location.href='https://medisi.ainox.pro/unsubscribe'">Отказаться от подписки</button>
-                </p>
-            </div>
+      </div>
+      <!-- Заголовок -->
+      <h1>Medisi</h1>
+      <p>Медитация - это путь к новым горизонтам вашего сознания</p>
+      <div id="share"></div>
+      <div id="pwaInstall"></div>
+      <!-- Футер -->
+      <div class="footer">
+        <div class="footer-box">
+          <div class="footer-name">MediSi</div>
+          <div class="footer-pwa">
+            <ion-icon size="large" name="logo-pwa"></ion-icon>
+            <ion-icon name="logo-apple"></ion-icon>
+            <ion-icon name="logo-android"></ion-icon>
+            <ion-icon name="logo-windows"></ion-icon>
+          </div>
+          <div class="footer-sweety">TRY®SWEETY 2021</div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script>
-        const host = "https://medisi.one";
-        if (localStorage.getItem('_token')) {
-            jQuery.ajax({
-                url: host + "/user/get",
-                type: "POST",
-                data: {
-                    token: localStorage.getItem('_token')
-                },
-                success: function (response) {
-                    localStorage.setItem('_id', response._id || "");
-                    localStorage.setItem('_email', response.email || "");
-                    localStorage.setItem('_token', response.token || "");
-                    localStorage.setItem('_expire_date', response.expire_date || "");
-                    console.log(response);
-                    jQuery(".exit-button").show();
-                    jQuery(".buttons_block-button_unsub").show();
-                },
-                error: function (response) {
-                    console.log(1)
-                    console.log(response);
-                }
-            });
-        }
-        else if (!localStorage.getItem('_token') || new Date(localStorage.getItem('_expire_date')) <= new Date()) {
-            jQuery(".buttons_block").show();
-            jQuery(".buttons_block-button").show();
-            jQuery(".login-button").show();
-        }
-        if (localStorage.getItem('_expire_date')) {
-            jQuery('#expire-date').text(new Date(localStorage.getItem('_expire_date')).toLocaleDateString())
-            jQuery(".date_block").show();
-        } else {
-            jQuery(".buttons_block").show();
-            jQuery(".buttons_block-button").show();
-        }
-        if (localStorage.getItem('_email')) {
-            jQuery('.email').val(localStorage.getItem('_email'))
-        }
+  <!-- здесь будет ПОПАП а пока поля инпута в хардкоде -->
+  <div id="popup" class="popup">
+    <a href="#header" class="popup-area"></a>
+    <div class="popup-body">
+      <div class="popup-content">
+        <a href="#header" class="popup-close">
+          <ion-icon size="large" name="close-circle-outline"></ion-icon>
+        </a>
+        <h3>ВЫБЕРИТЕ ПОДХОДЯЩИЙ ТАРИФНЫЙ ПЛАН, ЧТОБЫ ПОЛУЧИТЬ ДОСТУП К ПОЛНОЙ КОЛЛЕКЦИИ</h3>
+        <h4 style="display: none;" class="date_block">Премиум тариф оплачен до: <br /><br /><span
+            id="expire-date">00:00:00</span>
+        </h4>
+        <p style="margin: 0px; padding: 0; font-size: 18px; font-weight: 600; text-align: left;">ШАГ 1: ВВЕДИТЕ
+          E-MAIL
+        </p>
+        <input type="email" placeholder="e-mail" name="login" class="email">
+        <div class="input-email-descriptions">Сначала введите свой e-mail, а затем выберите подходящий тариф.
+          Для
+          активации оплаченного тарифа необходимо повторно войти в приложение с тем же e-mail!</div>
+        <button type="button" name="show_more" class="login-button" style="display: none;">Войти</button>
+        <button type="button" name="show_more" class="exit-button" style="display: none;">Выйти</button>
+        <div class="input-email-bottomline"></div>
 
-        jQuery(".exit-button").click(function () {
-            localStorage.clear();
+
+        <div style="display: none;" class="buttons_block">
+          <p style="margin: 0px; padding: 0; font-size: 18px; font-weight: 600; text-align: left;">ШАГ 2:
+            ВЫБЕРИТЕ ТАРИФ
+          </p>
+          <button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+            data-option="3a877d9797edf59">Подписка на год</button>
+          <div class="input-email-descriptions">Стоимость подписки на 365 дней составляет 1450 рублей</div>
+          <button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+            data-option="e481fd256c12b81">Подписка на квартал</button>
+          <div class="input-email-descriptions">Стоимость подписки на 90 дней составляет 999 рублей</div>
+          <button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+            data-option="569abe05dd0e2f9">Подписка на месяц</button>
+          <div class="input-email-descriptions">Стоимость подписки на 30 дней составляет 349 рублей</div>
+          <button type="button" name="show_more" class="subscribe-button buttons_block-button" style="display: none;"
+            data-option="f07d58538bf14d2">Подписка на неделю</button>
+          <div class="input-email-descriptions">Стоимость подписки на 7 дней составляет 179 рублей</div>
+          </br>
+          <div class="input-email-bottomline"></div>
+        </div>
+        <section class="ac-container">
+          <div>
+            <input id="ac-1" name="accordion-1" type="radio" checked />
+            <label for="ac-1">КОНТАКТЫ</label>
+            <article style="height: 60px;">
+              <div class="accordion-content">По всем вопросам обращайтесь на наш e-mail:
+                <a href="mailto:inna42009@gmail.com" target="_blank" rel="noopener noreferrer">inna42009@gmail.com</a>
+              </div>
+            </article>
+          </div>
+          <div>
+            <input id="ac-2" name="accordion-1" type="radio" />
+            <label for="ac-2">ПОЛИТИКА КОНФИДЕЦИАЛЬНОСТИ</label>
+            <article>
+              <div class="accordion-content">Утверждена Приказом № 1 от 12.01.2021
+                «Об утверждении Политики конфиденциальности Приложения MideSi»
+
+
+                Политика конфиденциальности мобильного приложения MideSi
+
+                1. Общие положения
+                1.1.Настоящая политика конфиденциальности для мобильного приложения (далее – Политика)
+                действует в
+                отношении той информации, которую Индивидуальный предприниматель Спицына Инна Сергеевна
+                (ИНН
+                343705371885 ОГРНИП 315345600005465, юридический адрес: 403302 Волгоградская обл., с.
+                Староселье, ул.
+                Украинская, д. 39 б) (далее – Компания, Мы) может получить с устройства пользователя во
+                время
+                использования им мобильного приложения MideSi (далее – Приложение).
+                1.2.Использование Приложения означает безоговорочное согласие Пользователя с настоящей
+                Политикой и
+                указанными в ней условиями обработки информации, получаемой с устройства пользователя. В
+                случае
+                несогласия с Политикой пользователь должен воздержаться от использования Приложения.
+                1.3.Настоящая Политика конфиденциальности составлена в соответствии с требованиями
+                Федерального закона
+                «О персональных данных» и определяет порядок обработки персональных данных и меры по
+                обеспечению
+                безопасности персональных данных, предпринимаемые Компанией. Оператор ставит своей
+                важнейшей целью и
+                условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина
+                при обработке
+                его персональных данных, в том числе защиты прав на неприкосновенность частной жизни,
+                личную и семейную
+                тайну.
+                1.4.Настоящая Политика конфиденциальности Приложения действует в отношении всей
+                информации, которую
+                Компания может получить о пользователе во время использования им данного Приложения.
+                1.5. Компания не проверяет достоверность персональной информации, предоставляемой
+                пользователями, и не
+                осуществляет контроль за их дееспособностью.
+                1.6.Компания исходит из того, что информация, переданная им от пользователей, является
+                достоверной и
+                поддерживает эту информацию в актуальном состоянии.
+                1.7.Устанавливая Приложение на свое мобильное устройство, Пользователь дает согласие
+                Компании на сбор,
+                обработку, запись, систематизацию, хранение, модификацию, обезличивание, удаление,
+                изменение,
+                использование персональных данных Пользователя в целях оказания услуг по договорам,
+                заключенным между
+                Пользователем и Компанией.
+
+                2. Компания может обрабатывать следующую информацию Пользователя
+                2.1.Компания собирает непосредственно от Вас определенную информацию, которая включает,
+                помимо прочего,
+                информацию, которую Вы предоставляете в ответ на вопросы, которые задает Компания. Мы
+                также собираем
+                Ваши персональные данные от третьих лиц, такие как информация в Вашем профиле в
+                социальных сетях,
+                которые Вы подключаете к мобильному приложению. Также есть определенные данные, которые
+                мы собираем
+                автоматически, такие как информация о Вашем устройстве и с какими разделами наших услуг
+                Вы
+                взаимодействуете или на использование каких тратите свое время.
+                2.2.Информация о Вашем устройстве, в том числе модель устройства, версия операционной
+                системы,
+                уникальные идентификаторы устройства, а также данные о мобильной сети и номер телефона,
+                используются для
+                анализа возможных ошибок в работе Приложения и совершенствования работы Приложения.
+                2.3.Данные о Пользователе, в том числе фамилия, имя, отчество, адрес, адрес электронной
+                почты, номер
+                мобильного телефона, дата рождения, пароль («Данные профиля»), когда Вы настраиваете
+                свой профиль. Мы
+                также можем предоставить Вам возможность добавить личную информацию, такую как
+                фотография, и информацию,
+                которую Вы можете поместить в раздел «Мои заметки» Приложения.
+                2.4.Мы пользуемся услугами оператора сторонней платежной системы для обработки платежей,
+                которые нам
+                производятся. В связи с обработкой таких платежей мы не сохраняем никакую финансовую
+                информацию, как,
+                например, номера кредитных карт.
+                2.5.Вам может быть предложено заполнить форму или анкету, оставить свой отзыв или
+                принять участие в
+                рекламной акции (например, в конкурсе или челлендже) или в контенте, созданном
+                пользователем (например,
+                подкасты), либо через Услуги, либо через стороннюю платформу. Если Вы принимаете участие
+                в подобном, мы
+                соберем и сохраним данные, которые Вы предоставляете в рамках участия, такие как Ваше
+                имя, адрес
+                электронной почты, дата рождения и/или номер телефона. Упомянутые данные являются и
+                будут подчиняться
+                правилам настоящей Политики конфиденциальности, за исключением тех случаев, когда
+                правила рекламной
+                кампании или другой более строгой политики конфиденциальности, которая также будет
+                представлена Вашему
+                вниманию, содержат противоположное или иное правило. При условии Вашего явного согласия,
+                мы можем
+                собирать, хранить и размещать Вашу фотографию с целью передачи Ваших отзывов другим
+                лицам с помощью
+                Приложения, Веб-сайта, электронного бюллетеня или любым другим способом. Если мы
+                используем стороннюю
+                платформу для проведения опроса или рекламной акции, применяется политика
+                конфиденциальности третьей
+                стороны.
+                2.6.Если Вы обращаетесь к нам за поддержкой или сообщаете о проблеме или вопросе
+                (независимо от того,
+                создали ли Вы профиль), мы собираем и храним Ваши данные, такие как Ваши контактные
+                данные, сообщения и
+                другие данные, включая, помимо прочего, Ваше имя, адрес электронной почты, язык,
+                местоположение,
+                операционную систему, IP-адрес и любые другие данные, которые Вы предоставляете или
+                которые мы собираем
+                автоматически. Мы используем эти данные, чтобы ответить Вам и изучить Ваш вопрос или
+                проблему в
+                соответствии с правилами настоящей Политики конфиденциальности.
+                2.7.Данные, которые автоматически передаются разработчику в процессе их использования с
+                помощью
+                установленного на устройстве приложения, в том числе информация из cookie, информация
+                обустройстве
+                Пользователя.
+                2.8.Данный доступ к функциям устройства необходим для полноценного функционирования
+                Приложения и не
+                используется для причинения вреда Пользователю.
+
+
+                3. Цели сбора и обработки персональной информации пользователей
+                3.1.Приложение собирает и хранит только те персональные данные, которые необходимы для
+                предоставления
+                сервисов, входящих в состав приложения.
+                3.2.Персональную информацию Пользователя приложения может использовать в следующих
+                целях:
+                3.2.1.Идентификации стороны в рамках соглашений;
+                3.2.2.Предоставления Пользователю информации в рамках Договора, заключенного между
+                Пользователем и
+                Компанией;
+                3.2.3.Предоставление Пользователю персонализированных сервисов;
+                3.2.4.Связь с Пользователем, в том числе, направление уведомлений, запросов и
+                информации, касающихся
+                использования сервисов, оказания услуг, а также обработка запросов и заявок от
+                Пользователя;
+                3.2.5.Улучшения качества Приложения, удобства его использования, разработка новых
+                сервисов и услуг;
+                3.2.6.Проведение статистических и иных исследований на основе обезличенных данных.
+
+
+                4.Условия обработки персональной информации Пользователя
+                4.1.В соответствии с настоящей Политикой Компания осуществляет обработку только той
+                информации и только
+                для тех целей, которые определены в п. 3.2. Политики.
+                4.2.Компания принимает все зависящие от Компании организационные и технические мер для
+                защиты информации
+                Пользователя от неправомерного доступа третьих лиц, использования, копирования и
+                распространения.
+                4.3.Для целей, изложенных в настоящей Политике, Компания может привлекать к обработке
+                Информации
+                Пользователя партнеров, с которыми у Компании заключены соответствующие соглашения о
+                конфиденциальности.
+                Передача Компаний партнерам обезличенных данных об использовании Приложения для целей
+                улучшения работы
+                Приложения осуществляется на основании договоров с партнерами.
+                4.4.Данные профиля, системные данные и данные об использовании будут храниться в нашей
+                защищенной базе
+                данных в течение 1 (одного) года после удаления Пользователем Приложения или прекращения
+                членства, для
+                ускорения процесса и для удобства пользователя в случае, если Пользователь, который
+                раньше использовал
+                Приложение, впоследствии пожелает снова начать им пользоваться.
+                4.5.При обработке персональных данных пользователей Компания руководствуется Федеральным
+                законом «О
+                персональных данных».
+
+                5.Изменение Пользователем персональной информации
+                5.1.Пользователь может в любой момент изменить (обновить, дополнить) предоставляемую им
+                персональную
+                информацию или ее часть, заново заполнив форму Профиля.
+
+                6.Меры, принимаемые для защиты персональной информации
+                6.1.Компания принимает все необходимые меры для защиты любых персональных данных,
+                предоставляемых
+                Пользователями.
+                6.2.Доступ к персональным данным имеют только уполномоченные сотрудники Компании,
+                уполномоченные
+                сотрудники сторонних компаний (т.е. поставщиков услуг) или иных контрагентов,
+                подписавшие договор о
+                конфиденциальности и защите персональных данных.
+                6.3.Все сотрудники Компании, имеющие доступ к персональным данным, подписывают
+                соглашения о
+                неразглашении конфиденциальной информации и должны придерживаться политики по
+                обеспечению
+                конфиденциальности и защиты персональных данных.
+                6.4.В целях обеспечения конфиденциальности информации и защиты персональных данных
+                Компания принимает
+                меры, необходимые для предотвращения несанкционированного доступа к данным
+                Пользователей.
+                6.5.Пользователи используют Приложение как есть и предпринимают меры по защите своих
+                персональных данных
+                в нем от угроз безопасности, в т.ч., но не ограничиваясь:
+                -защищают свое устройство и установленные в нем Приложения от кражи и утери;
+                -защищают свое устройство и установленные в нем Приложения от несанкционированного
+                доступа.
+
+                7.Изменение Политики конфиденциальности
+                7.1.Компания имеет право вносить изменения в настоящую Политику конфиденциальности.
+                7.2.При внесении изменений в актуальной редакции указывается дата последнего обновления.
+                Новая редакция
+                Политики конфиденциальности вступает в силу с момента ее размещения в Приложении, если
+                иное не
+                предусмотрено новой редакцией Политики.
+
+                8.Применимое законодательство
+                8.1.К настоящей Политике и отношениям между Пользователем и Компанией, возникающим в
+                связи с применением
+                Политики конфиденциальности, подлежит применению законодательство Российской Федерации.
+
+                9.Обратная связь
+                9.1.Вопрсы и предложения по повод настоящей Политики следует сообщать в службу поддержки
+                пользователей –
+                inna42009@yandex.ru
+
+
+
+              </div>
+            </article>
+          </div>
+          <div>
+            <input id="ac-3" name="accordion-1" type="radio" />
+            <label for="ac-3">ДОГОВОР ОФЕРТА</label>
+            <article>
+              <div class="accordion-content">Договор — публичная оферта
+                Настоящий публичный договор (далее именуемый по тексту — Договор) определяет порядок
+                оказания услуг -
+                медитаций, а также взаимные права, обязанности и порядок взаимоотношений между
+                Индивидуальным
+                предпринимателем Спицыной Инной Сергеевной, именуемым в дальнейшем «Продавец» (ИНН
+                343705371885 ОГРНИП
+                315345600005465, юридический адрес: 403302 Волгоградская обл., с. Староселье, ул.
+                Украинская, д. 39 б) и
+                Заказчиком услуг – физическим лицом, именуемым в дальнейшем «Подписчик», принявшим
+                (акцептовавшим)
+                публичное предложение (оферту) о заключении настоящего Договора. Заказчик знакомится с
+                настоящим
+                Договором и дает свое согласие на акцепт настоящего Договора в момент оформления и
+                оплаты услуги.
+
+                Договор, в соответствии со статьей 435 и частью 2 статьи 437 Гражданского кодекса
+                Российской Федерации,
+                является публичной офертой (предложением) в адрес неограниченного числа лиц,
+                пользователей сети
+                Интернет.
+
+                В соответствии со статьей 438 Гражданского Кодекса Российской Федерации, полным и
+                безоговорочным
+                акцептом (принятием) Договора является подтверждение Подписчиком своего согласия с
+                условиями Договора
+                или осуществление им добровольного платежа.
+                1. Термины, используемые в договоре
+                1.1. Подписчик — пользователь сети Интернет, принявший условия Договора, получивший
+                уникальный
+                идентификатор в Приложении Продавца и осуществивший авансовый платеж за Использование
+                Произведений.
+
+                1.2. . Произведения — аудиозаписи медитаций, музыки и литературных произведений,
+                представленные в
+                электронном виде в сети Интернет в различных форматах, размещенные в Приложениях
+                Продавца
+
+                1.3. Каталог — совокупность Произведений.
+
+                1.4. Приложение Продавца — прогрессивный сайт на платформе Medisi.one
+
+                1.5. Использование — открытие Подписчиком Произведений
+
+                1.6. Биллинг — система учета платежей.
+
+                2. Предмет договора
+                2.1. Продавец предоставляет возможность Подписчику на платной основе открывать
+                Произведения,
+                представленные в Каталоге, через мобильное приложение.
+                3. Обязанности сторон
+                3.1. Обязанности Продавца
+                3.1.1. Предоставлять Подписчику возможность Использования Произведений не позднее 24
+                часов с момента
+                подтверждения Биллингом произведенной оплаты и идентификации Подписчика как плательщика
+                произведенного
+                платежа.
+                3.1.2. Не разглашать третьим лицам сведения о Подписчике, полученные от Подписчика при
+                регистрации.
+                3.1.3. Уведомлять Подписчика об изменениях условий Договора и его Приложений путем
+                размещения
+                соответствующей информации на Сайтах Продавца не менее чем за 30 (тридцать) календарных
+                дней до
+                вступления изменений в силу.
+                3.2. Обязанности Подписчика
+                3.2.1. Зарегистрироваться в Приложении Продавца путём автоматической регистрации по
+                факту оплаты.
+
+                3.2.2. Производить оплату за Использование Произведений согласно п.4 Договора.
+
+                3.2.3. Использовать доступные в Приложении Продавца Произведения исключительно в личных
+                целях, для
+                прослушивания.
+
+                3.2.4. Подписчик не имеет права:
+                передавать либо рассылать скачанные Произведения третьим лицам как полностью, так и
+                частично;
+                сообщать публично Произведения по известным каналам вещания, таким как радио,
+                телевидение и проч.
+                воспроизводить Произведения, то есть изготавливать экземпляры Произведений или их частей
+                в любой
+                материальной форме, если это воспроизведение имеет цель дальнейшего распространения;
+                доводить Произведения до всеобщего сведения с использованием сети Интернет и прочих
+                цифровых сетей;
+                переделывать, изменять или прочим образом перерабатывать Произведения.
+                Несоблюдение требований п.3.2.4. Договора является нарушением законодательства об
+                авторском праве и
+                преследуется по закону.
+
+                3.2.5. Вся информация, размещенная на Сайтах Продавца о порядке пользования Каталогом,
+                оплаты
+                Произведений и прочих особенностях исполнения Договора является неотъемлемой частью
+                Договора и
+                обязательна к исполнению Подписчиком.
+                4. Условия оплаты
+                4.1. Подписчик производит авансовый платеж за подписку на условиях, указанных на Сайте
+                Продавца.
+
+                4.2. Продавец вправе в одностороннем порядке изменять действующие цены путем размещения
+                соответствующей
+                информации на Сайте Продавца. Любое изменение цен не касается уже оплаченных периодов
+                подписки.
+
+                4.3. В Приложениях Продавца списание средств происходит автоматически на сумму стоимости
+                месячной,
+                недельной, годовой или других периодов подписки по выбранному тарифу не чаще выбранного
+                периода, в
+                случае месячной подписки — месяца, в случае недельной подписки — недели.
+                5. Ответственность сторон
+                5.1. Подписчик принимает на себя полную ответственность и риски, связанные с
+                использованием Каталога.
+
+                5.2. Подписчик полностью несет ответственность за использование третьими лицами своей
+                учётной записи.
+
+                5.3. Продавец не несет ответственности за любые расходы Подписчика или прямой либо
+                косвенный ущерб,
+                который может быть нанесен Подписчику вследствие использования Каталога.
+
+                5.4. Продавец нe нeсeт отвeтствeнности за качество доступа к Каталогу через сеть
+                Интернет.
+
+                5.5. Ни при каких обстоятельствах Продавец не несет ответственности за использование
+                третьими лицами
+                учётной записи Подписчика.
+
+                5.6. Продавец не несет ответственности за прямой или косвенный ущерб, понесенный
+                Подписчиком в
+                результате ошибок передачи данных, сбоев/дефектов в работе программного обеспечения
+                и/или оборудования,
+                потерь и повреждений данных, ошибок обработки или отображения данных, задержек в
+                передаче данных и
+                других сбоев, случившихся не по вине Продавца.
+                6. Срок действия договора
+                6.1. Договор вступает в силу с момента поступления первого авансового платежа от
+                Подписчика и действует
+                до полного исполнения Сторонами своих обязательств.
+                7. Обстоятельства непреодолимой силы
+                7.1. Стороны освобождаются от ответственности за частичное или полное неисполнение
+                обязательств по
+                настоящему Договору в случае, если такое неисполнение явилось прямым следствием
+                обстоятельств
+                непреодолимой силы (форс-мажорных обстоятельств), возникших после заключения Договора, в
+                результате
+                событий чрезвычайного характера, а именно: пожара, наводнения, урагана и землетрясения
+                или наложения
+                органами государственной власти ограничений на деятельность любой из Сторон, и если эти
+                обстоятельства
+                Стороны не могли ни предвидеть, ни предотвратить разумными мерами.
+                8. Прочие условия
+                8.1. В случае, если какое-либо положение или какая-либо часть положения Договора
+                признаны
+                недействительными или не имеющими юридической силы, остальные положения и части
+                положений Договора
+                остаются в полной силе и действии.
+
+                8.2. Все Приложения к настоящему Договору являются его неотъемлемой частью.
+
+                8.3. Во всем остальном Стороны договорились руководствоваться действующим
+                законодательством Российской
+                Федерации.
+
+                8.4. Продавец вправе вносить изменения в Договор с обязательным размещением
+                соответствующей информации
+                на Сайте Продавца за 30 (тридцать) календарных дней до вступления соответствующих
+                изменений в силу.
+
+                8.5. По всем возникающим вопросам Подписчик вправе обращаться в Службу поддержки
+                Продавца по адресу
+                электронной почте inna42009@yandex.ru
+                9. Разрешение споров
+                9.1. Споры и разногласия, которые могут возникнуть по данному Договору, решаются путем
+                соблюдения
+                досудебного (претензионного) порядка. Срок рассмотрения Продавцом претензии — 7 (семь)
+                календарных дней
+                с момента ее получения от Подписчика.
+
+                9.2. Если Стороны не придут к соглашению, эти споры и разногласия разрешаются в судебном
+                порядке
+                согласно действующему законодательству Российской Федерации.
+                Продавец: Индивидуальный предприниматель Спицына Инна Сергеевна
+                ИНН 343705371885, ОГРНИП 315345600005465,
+                Адрес: 403302 Волгоградская обл., с. Староселье, ул. Украинская, д. 39 б)
+              </div>
+            </article>
+          </div>
+        </section>
+        <p><button type="button" name="show_more" class="buttons_block-button_unsub" style="display: none;"
+            onclick="location.href='https://medisi.ainox.pro/unsubscribe'">Отказаться от подписки</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script>
+    const host = "https://medisi.one";
+    if (localStorage.getItem('_token')) {
+      jQuery.ajax({
+        url: host + "/user/get",
+        type: "POST",
+        data: {
+          token: localStorage.getItem('_token')
+        },
+        success: function (response) {
+          localStorage.setItem('_id', response._id || "");
+          localStorage.setItem('_email', response.email || "");
+          localStorage.setItem('_token', response.token || "");
+          localStorage.setItem('_expire_date', response.expire_date || "");
+          console.log(response);
+          jQuery(".exit-button").show();
+          jQuery(".buttons_block-button_unsub").show();
+        },
+        error: function (response) {
+          console.log(1)
+          console.log(response);
+        }
+      });
+    }
+    else if (!localStorage.getItem('_token') || new Date(localStorage.getItem('_expire_date')) <= new Date()) {
+      jQuery(".buttons_block").show();
+      jQuery(".buttons_block-button").show();
+      jQuery(".login-button").show();
+    }
+    if (localStorage.getItem('_expire_date')) {
+      jQuery('#expire-date').text(new Date(localStorage.getItem('_expire_date')).toLocaleDateString())
+      jQuery(".date_block").show();
+    } else {
+      jQuery(".buttons_block").show();
+      jQuery(".buttons_block-button").show();
+    }
+    if (localStorage.getItem('_email')) {
+      jQuery('.email').val(localStorage.getItem('_email'))
+    }
+
+    jQuery(".exit-button").click(function () {
+      localStorage.clear();
+      location.reload();
+    })
+
+    jQuery(".login-button").click(function () {
+      const token_storage = localStorage.getItem('_token');
+      const email = jQuery(".email").val();
+      if (email) {
+        jQuery.ajax({
+          url: host + "/user/get",
+          type: "POST",
+          data: {
+            email: email,
+          },
+          success: function (response) {
+            localStorage.setItem('_id', response._id || "");
+            localStorage.setItem('_email', response.email || "");
+            localStorage.setItem('_token', response.token || "");
+            localStorage.setItem('_expire_date', response.expire_date || "");
+            console.log(response);
             location.reload();
-        })
+          },
+          error: function (response) {
+            console.log(1)
+            console.log(response);
+          }
+        });
+      }
+    })
+    jQuery(".subscribe-button").click(function () {
+      const token_storage = localStorage.getItem('_token');
+      const email_storage = localStorage.getItem('_email');
+      const email = jQuery(".email").val();
+      const data = {
+        email: jQuery(".email").val(),
+        action: jQuery(this).attr("data-option")
+      }
+      if (data.email && data.action) {
+        jQuery.ajax({
+          url: host + "/user/get",
+          type: "POST",
+          data: {
+            email: email_storage || email,
+            token: token_storage
+          },
+          success: function (response) {
+            localStorage.setItem('_id', response._id || "");
+            localStorage.setItem('_email', response.email || "");
+            localStorage.setItem('_token', response.token || "");
+            localStorage.setItem('_expire_date', response.expire_date || "");
+            window.location = "https://go.ainox.pro/in.php?redirect=true&idform=" + data.action + "&e-mail=" + response.email;
+            console.log(response);
+          },
+          error: function (response) {
+            console.log(1)
+            console.log(response);
+          }
+        });
+      } else alert("Выполните вход");
+      console.log(data)
+    })
+  </script>
+  <!-- Здесь загружаем скрипты шрифтов -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap" rel="stylesheet">
 
-        jQuery(".login-button").click(function () {
-            const token_storage = localStorage.getItem('_token');
-            const email = jQuery(".email").val();
-            if (email) {
-                jQuery.ajax({
-                    url: host + "/user/get",
-                    type: "POST",
-                    data: {
-                        email: email,
-                    },
-                    success: function (response) {
-                        localStorage.setItem('_id', response._id || "");
-                        localStorage.setItem('_email', response.email || "");
-                        localStorage.setItem('_token', response.token || "");
-                        localStorage.setItem('_expire_date', response.expire_date || "");
-                        console.log(response);
-                        location.reload();
-                    },
-                    error: function (response) {
-                        console.log(1)
-                        console.log(response);
-                    }
-                });
-            }
-        })
-        jQuery(".subscribe-button").click(function () {
-            const token_storage = localStorage.getItem('_token');
-            const email_storage = localStorage.getItem('_email');
-            const email = jQuery(".email").val();
-            const data = {
-                email: jQuery(".email").val(),
-                action: jQuery(this).attr("data-option")
-            }
-            if (data.email && data.action) {
-                jQuery.ajax({
-                    url: host + "/user/get",
-                    type: "POST",
-                    data: {
-                        email: email_storage || email,
-                        token: token_storage
-                    },
-                    success: function (response) {
-                        localStorage.setItem('_id', response._id || "");
-                        localStorage.setItem('_email', response.email || "");
-                        localStorage.setItem('_token', response.token || "");
-                        localStorage.setItem('_expire_date', response.expire_date || "");
-                        window.location = "https://go.ainox.pro/in.php?redirect=true&idform=" + data.action + "&e-mail=" + response.email;
-                        console.log(response);
-                    },
-                    error: function (response) {
-                        console.log(1)
-                        console.log(response);
-                    }
-                });
-            } else alert("Выполните вход");
-            console.log(data)
-        })
-    </script>
-    <!-- Здесь загружаем скрипты шрифтов -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap" rel="stylesheet">
+  <!-- Common Add to Homescreen Template -->
+  <div class="ath-container banner-bottom-center">
+    <div class="ath-banner">
+      <div class="ath-banner-cell">
+        <img src="logo50.png" alt="PWA" class="ath-prompt-logo">
+      </div>
+      <div class="ath-banner-title">
+        <p>Install this PWA?</p>
+      </div>
+      <div class="ath-banner-cell">
+        <button class="btn btn-cancel btn-link">Not Now</button>
+      </div>
+      <div class="ath-banner-cell">
+        <button class="btn btn-install btn-success">Install</button>
+      </div>
 
-    <!-- Common Add to Homescreen Template -->
-    <div class="ath-container banner-bottom-center">
-        <div class="ath-banner">
-            <div class="ath-banner-cell">
-                <img src="logo50.png" alt="PWA" class="ath-prompt-logo">
-            </div>
-            <div class="ath-banner-title">
-                <p>Install this PWA?</p>
-            </div>
-            <div class="ath-banner-cell">
-                <button class="btn btn-cancel btn-link">Not Now</button>
-            </div>
-            <div class="ath-banner-cell">
-                <button class="btn btn-install btn-success">Install</button>
-            </div>
-
-        </div>
     </div>
-    <div class="d-flex justify-content-center my-1 py-2 mx-auto">
-        <p>Generated by <a href="https://pwastarter.love2dev.com/">Love2Dev's PWA Starter</a></p>
-    </div>
-    <script src="a2hs/addtohomescreenmin.js" type="application/javascript"></script>
+  </div>
+  <div class="d-flex justify-content-center my-1 py-2 mx-auto">
+    <p>Generated by <a href="https://pwastarter.love2dev.com/">Love2Dev's PWA Starter</a></p>
+  </div>
 
-        <script src="a2hs/addtohomescreen.js"></script>
-    <script>
-        addToHomescreen( {
-            appID: "one.medisi",
-            appName: "Medisi",
-            lifespan: 15,
-	startDelay:0,
-            autostart: true,
-            skipFirstVisit: true,
-            minSessions: 1,
-            displayPace: 0,
-            customPrompt: {
-                title: "Хотите установить Medisi?",
-                src: "meta/favicon-96x96.png",
-                cancelMsg: "Отмена",
-                installMsg: "Установить"
-            }
-        } );
-    </script>
-    <script>
-        if ( "serviceWorker" in navigator ) {
 
-            navigator.serviceWorker.register( "/sw.js" )
-                .then( function ( registration ) { // Registration was successful
+  <script src="a2hs/addtohomescreen.js"></script>
+  <script>
+    addToHomescreen({
+      appID: "one.medisi",
+      appName: "Medisi",
+      lifespan: 15,
+      startDelay: 0,
+      autostart: true,
+      minSessions: 1,
+      displayPace: 0,
+      customPrompt: {
+        title: "Хотите установить Medisi?",
+        src: "meta/favicon-96x96.png",
+        cancelMsg: "Отмена",
+        installMsg: "Установить"
+      }
+    });
+  </script>
+  <script>
+    if ("serviceWorker" in navigator) {
 
-                    console.log( "ServiceWorker registration successful with scope: ", registration.scope );
+      navigator.serviceWorker.register("/sw.js")
+        .then(function (registration) { // Registration was successful
 
-                } ).catch( function ( err ) { // registration failed :(
+          console.log("ServiceWorker registration successful with scope: ", registration.scope);
 
-                    console.log( "ServiceWorker registration failed: ", err );
+        }).catch(function (err) { // registration failed :(
 
-                } );
+          console.log("ServiceWorker registration failed: ", err);
 
-        }
-    </script>
+        });
+
+    }
+  </script>
 </body>
 
 </html>
