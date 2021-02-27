@@ -55,7 +55,7 @@ self.addEventListener( "fetch", function ( event ) {
         fetch( event.request )
 
         /* check the cache first, then hit the network */
-        
+        /*
                 caches.match( event.request )
                 .then( function ( response ) {
 
@@ -65,7 +65,7 @@ self.addEventListener( "fetch", function ( event ) {
 
                     return fetch( event.request );
                 } )
-        
+        */
     );
 
 } );
