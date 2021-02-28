@@ -23,7 +23,10 @@ const assets = [
   'images/relationships.jpg',
   'images/sleep.jpg',
   'images/medisilogo.png',
-  'favicon.png'
+  'favicon.png',
+  'meta/favicon-16x16.png',
+  'meta/favicon-32x32.png',
+  'meta/favicon-96x96.png'
 ];
 
 // cache size limit function
