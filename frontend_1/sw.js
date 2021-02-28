@@ -1,83 +1,74 @@
-//remember to increment the version # when you update the service worker
-const version = "1.00",
-    preCache = "PRECACHE-" + version,
-    cacheList = [ 
-      "/",
-      "index.html",
-      "css/index.css"
-   ];
+const staticCacheName = 'site-static-v4';
+const dynamicCacheName = 'site-dynamic-v4';
+const assets = [
+  '/',
+  'index.html',
+  'app.js',
+  'css/index.css',
+  'css/styles.css',
+  'logo50.png',
+  'images/abundance.jpg',
+  'images/health.jpg',
+  'images/relationships.jpg',
+  'images/sleep.jpg',
+  'images/sleep.jpg',
+  'images/medisilogo.png'
+];
 
-/*
-create a list (array) of urls to pre-cache for your application
-*/
+// cache size limit function
+const limitCacheSize = (name, size) => {
+  caches.open(name).then(cache => {
+    cache.keys().then(keys => {
+      if(keys.length > size){
+        cache.delete(keys[0]).then(limitCacheSize(name, size));
+      }
+    });
+  });
+};
 
-/*  Service Worker Event Handlers */
+// install event
+self.addEventListener('install', evt => {
+  //console.log('service worker installed');
+  evt.waitUntil(
+    caches.open(staticCacheName).then((cache) => {
+      console.log('caching shell assets');
+      cache.addAll(assets);
+    })
+  );
+});
 
-self.addEventListener( "install", function ( event ) {
+// activate event
+self.addEventListener('activate', evt => {
+  //console.log('service worker activated');
+  evt.waitUntil(
+    caches.keys().then(keys => {
+      //console.log(keys);
+      return Promise.all(keys
+        .filter(key => key !== staticCacheName && key !== dynamicCacheName)
+        .map(key => caches.delete(key))
+      );
+    })
+  );
+});
 
-    console.log( "Installing the service worker!" );
-
-    self.skipWaiting();
-
-    caches.open( preCache )
-        .then( cache => {
-
-            cache.addAll( cacheList );
-
-        } );
-
-} );
-
-self.addEventListener( "activate", function ( event ) {
-
-    event.waitUntil(
-
-        //wholesale purge of previous version caches
-        caches.keys().then( cacheNames => {
-            cacheNames.forEach( value => {
-
-                if ( value.indexOf( version ) < 0 ) {
-                    caches.delete( value );
-                }
-
-            } );
-
-            console.log( "service worker activated" );
-
-            return;
-
-        } )
-
+// fetch events
+self.addEventListener('fetch', evt => {
+  if(evt.request.url.indexOf('mongodb.net') === -1){
+    evt.respondWith(
+      caches.match(evt.request).then(cacheRes => {
+        return cacheRes || fetch(evt.request).then(fetchRes => {
+          return caches.open(dynamicCacheName).then(cache => {
+            cache.put(evt.request.url, fetchRes.clone());
+            // check cached items size
+            limitCacheSize(dynamicCacheName, 15);
+            return fetchRes;
+          })
+        });
+      }).catch(() => {
+        if(evt.request.url.indexOf('.html') > -1){
+          return caches.match('pages/fallback.html');
+        } 
+      })
     );
-
-} );
-
-self.addEventListener( "fetch", function ( event ) {
-
-    event.respondWith(
-
-        fetch( event.request )
-
-        /* check the cache first, then hit the network */
-        /*
-                caches.match( event.request )
-                .then( function ( response ) {
-
-                    if ( response ) {
-                        return response;
-                    }
-
-                    return fetch( event.request );
-                } )
-        */
-    );
-
-} );
-
-
-/* service worker resources
-
-https: //love2dev.com/blog/what-is-the-service-worker-cache-storage-limit/
-https: //love2dev.com/blog/service-worker-cache/
-
-*/
+  }
+});

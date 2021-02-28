@@ -4,8 +4,6 @@
 <head>
     <title>Medisi</title>
 <meta name="description" content="Приложение для медитаций">
-
-
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="application-name" content="Medisi">
@@ -63,7 +61,6 @@
 </head>
 
 <body>
-
     <div class="app">
         <div class="app-container">
           <div id="header" class="header-dilimetr"></div>
@@ -622,8 +619,9 @@
           </div>
         </div>
       </div>
+      <script src="app.js"></script>>
       <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-      <!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
+      
       <script>
         const host = "https://medisi.one";
         if (localStorage.getItem('_token')) {
@@ -730,60 +728,7 @@
       <!-- Здесь загружаем скрипты шрифтов -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap" rel="stylesheet">
-
-    <!-- Common Add to Homescreen Template -->
-    <div class="ath-container banner-bottom-center">
-        <div class="ath-banner">
-            <div class="ath-banner-cell">
-                <img src="logo50.png" alt="PWA" class="ath-prompt-logo">
-            </div>
-            <div class="ath-banner-title">
-                <p>Install this PWA?</p>
-            </div>
-            <div class="ath-banner-cell">
-                <button class="btn btn-cancel btn-link">Not Now</button>
-            </div>
-            <div class="ath-banner-cell">
-                <button class="btn btn-install btn-success">Install</button>
-            </div>
-
-        </div>
-    </div>
-    <!-- <script src="a2hs/addtohomescreen.js"></script>
-    <script>
-        addToHomescreen( {
-            appID: "one.medisi",
-            appName: "Medisi",
-            lifespan: 15,
-	startDelay:0,
-            autostart: true,
-            skipFirstVisit: true,
-            minSessions: 1,
-            displayPace: 0,
-            customPrompt: {
-                title: "Хотите установить Medisi?",
-                src: "meta/favicon-96x96.png",
-                cancelMsg: "Отмена",
-                installMsg: "Установить"
-            }
-        } );
-    </script> -->
-    <script>
-        if ( "serviceWorker" in navigator ) {
-
-            navigator.serviceWorker.register( "/sw.js" )
-                .then( function ( registration ) { // Registration was successful
-
-                    console.log( "ServiceWorker registration successful with scope: ", registration.scope );
-
-                } ).catch( function ( err ) { // registration failed :(
-
-                    console.log( "ServiceWorker registration failed: ", err );
-
-                } );
-
-        }
-    </script>
-</body>
+      
+    </body>
 
 </html>
