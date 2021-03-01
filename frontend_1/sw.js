@@ -10,6 +10,7 @@ const assets = [
   'plugins/player2.js',
   'plugins/player3.js',
   'plugins/player4.js',
+  'linkCopy.js',
   'css/index.css',
   'css/styles.css',
   'player1.html',
@@ -67,7 +68,7 @@ self.addEventListener('activate', evt => {
 
 // fetch events
 self.addEventListener('fetch', evt => {
-  // if(evt.request.url.indexOf('mongodb.net') === -1){
+  if(evt.request.url.indexOf('admin@cluster0.milmt.mongodb.net') === -1){
     evt.respondWith(
       caches.match(evt.request).then(cacheRes => {
         return cacheRes || fetch(evt.request).then(fetchRes => {
@@ -84,5 +85,5 @@ self.addEventListener('fetch', evt => {
         } 
       })
     );
-  // }
+  }
 });
