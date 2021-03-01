@@ -5,7 +5,7 @@
   <title>Medisi</title>
   <meta name="description" content="Приложение Medisi для медитаций для саморазвития">
   <link rel="stylesheet" href="css/index.css">
-
+  <link href="a2hs/addtohomescreen.css" rel="stylesheet">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Medisi">
@@ -53,10 +53,7 @@
   <meta name="theme-color" content="#000000">
 
   <link rel="manifest" href="manifest.json">
-  <script
-  type="module"
-  src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
-></script>
+   
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous">
@@ -97,9 +94,25 @@
         </div>
       </div>
 
+      <!-- Kнопка pwa -->
+      <div class="ath-container banner-bottom-center">
+        <div class="ath-banner">
+            <div class="ath-banner-cell">
+                <img src="logo50.png" alt="PWA" class="ath-prompt-logo">
+            </div>
+            <div class="ath-banner-title">
+                <p>Install this PWA?</p>
+            </div>
+            <div class="ath-banner-cell">
+                <button class="btn btn-cancel btn-link">Not Now</button>
+            </div>
+            <div class="ath-banner-cell">
+                <button class="btn btn-install btn-success">Install</button>
+            </div>
+        </div>
+    </div>
       <!-- Кнопка подписки -->
       <div class="box-button-subscriptions">
-        <pwa-install></pwa-install>
         <a href="#popupwindows" class="button-subscriptions">WINDOWS</a>
         <div class="botton-subscribtions-descriotions">Нажмите, чтобы установить приложение на WINDOWS</div>
         <a href="#popupandroid" class="button-subscriptions">ANDROID</a>
@@ -718,7 +731,28 @@
   <script src="app.js"></script>
   <script src="linkCopy.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  
+  <script src="a2hs/addtohomescreen.min.js" type="application/javascript"></script>
 
+        <script src="js/addtohomescreen.js"></script>
+    <script>
+        addToHomescreen( {
+            appID: "one.medisi.www",
+            appName: "Medisi",
+            lifespan: 15,
+	startDelay:0,
+            mandatory: true,
+            autostart: true,
+            minSessions: 1,
+            displayPace: 0,
+            customPrompt: {
+                title: "Install Medisi?",
+                src: "meta/favicon-96x96.png",
+                cancelMsg: "Cancel",
+                installMsg: "Install"
+            }
+        } );
+    </script>
   <!-- <script>
     const host = "https://medisi.one";
     if (localStorage.getItem('_token')) {
