@@ -492,8 +492,10 @@ p {
 .pwa-box {
     display: flex;
     justify-self: center;
+    flex-flow: row nowrap;
     align-items: center;
     width: 100%;
+    
 }
 
 .js-copy-target {
