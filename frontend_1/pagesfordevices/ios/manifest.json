@@ -68,6 +68,6 @@
             "type":"image/png","sizes":"50x50"}],
             "screenshots":
             [{
-                "src":"meta/screenshot_1.png","sizes":"1280x800","type":"image/png"},
-                {"src":"meta/screenshot_2.png","sizes":"750x1334","type":"image/png"}]
+                "src":"meta/screenshot_1.jpg","sizes":"1280x800","type":"image/png"},
+                {"src":"meta/screenshot_2.jpg","sizes":"750x1334","type":"image/png"}]
             }
