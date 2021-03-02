@@ -12,13 +12,8 @@
     "related_applications":[],
     "prefer_related_applications":false,
     "url":"https://www.medisi.one/",
-    "categories":["health"],"description":"Приложение для медитаций",
-    "features": [
-     "Авторские медитации Инны Спициной",
-     "Память телефона не используются",
-     "Работают на заблокированном экране",
-     "Доступные цены по подписке от 179 рублей"
-    ],
+    "categories":["health"],"description":"Авторские медитации Инны Спициной",
+    "features": "Память телефона не используются, работают на заблокированном экране, доступные цены по подписке от 179 рублей",
     "icons":
     [{
         "src":"meta/android/android-launchericon-512-512.png","type":"image/png","sizes":"512x512","purpose": "any maskable"},
