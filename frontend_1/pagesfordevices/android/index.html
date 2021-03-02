@@ -58,7 +58,6 @@
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous">
     </script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.js"></script>
   
 </head>
 
@@ -130,7 +129,7 @@
       <p>Медитация - это путь к новым горизонтам вашего сознания.
         Используйте регулярно наше прогрессивное вэб приложение для ANDROID,чтобы изменить свою жизнь к лучшему!
       </p>
-      
+
       <!-- Кнопка Установить PWA -->
       <pwa-install manifestpath="manifest.json"></pwa-install>
       
@@ -625,14 +624,13 @@
       </div> 
     </div>
   </div>
-  <script src="app.js"></script>
   <script type="module">
     import 'pwa-install.js';
   </script>
-  <script async defer>
-    var installComponent = document.createElement("pwa-install");
-    document.body.appendChild(installComponent);
-    installComponent.getInstalledStatus();
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
   </script>
   <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 
