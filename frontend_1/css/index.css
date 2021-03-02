@@ -493,11 +493,10 @@ p {
 
 .install-box-for-pwa {
     position: fixed;
-    top: 4px;
-    left: 4px;
+    top: 2px;
+    left: 2px;
     width: 150px;
     height: 50px;
-    background-color: red;
     
 }
 
