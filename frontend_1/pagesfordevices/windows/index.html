@@ -52,8 +52,9 @@
 
   <meta name="theme-color" content="#000000">
 
-  <!-- <link rel="manifest" href="manifest.json"> -->
-
+  <link rel="manifest" href="manifest.json">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous">
@@ -98,9 +99,6 @@
       <div class="box-button-subscriptions">
         <a href="#popup" class="button-subscriptions">ВАШИ ПОДПИСКИ</a>
       </div>
-      <!-- <div class="subscriptions">
-                <div class="subscriptions-button" onclick="location.href='https://medisi.ainox.pro/#catalog'; target='_blank'; rel='noopener noreferrer'"><SPAN>ВАШИ ПОДПИСКИ</SPAN></div>
-              </div> -->
       <!-- Карусель коллекций -->
       <div class="carousel">
         <div class="carousel-card">
@@ -117,19 +115,12 @@
             <div class="carousel-card-item-image" style="background-image: URL(../../images/health.jpg)"></div>
             <!-- <div class="carousel-promo-item-title">Сборник медитаций для оздоровления</div> -->
           </div>
-          <!-- <div class="carousel-promo-item">
-                    <div class="carousel-card-item-image" style="background-image: URL(../../images/sleep.jpg); background-position: center;"></div>
-                    <div class="carousel-promo-item-title">Сборник медитаций для релакса и сна</div>
-                  </div> -->
-        </div>
       </div>
       <!-- Заголовок -->
       <h1>Medisi PWA для Windows</h1>
       <p>Медитация - это путь к новым горизонтам вашего сознания.
         Используйте регулярно наше прогрессивное вэб приложение для WINDOWS,чтобы изменить свою жизнь к лучшему!
       </p>
-      <div id="share"></div>
-      <div id="pwaInstall"></div>
       <!-- Футер -->
       <div class="footer">
         <div class="footer-box">
@@ -143,6 +134,13 @@
           <div class="footer-sweety">TRY®SWEETY 2021</div>
         </div>
       </div>
+    </div>
+    <!-- Кнопка Установить PWA -->
+    <div class="install-box-for-pwa">
+      <pwa-install
+        explainer="Это прогрессивное вэб приложение (PWA) можно установить на ваш компьютер или мобильное устройство. Это позволит этому PWA выглядеть и вести себя как любое другое установленное приложение. Вы найдете его в списках приложений и сможете закрепить на главном экране, в меню ПУСК или на панели задач. Для установки не требуется регистрация и кредитная карта."
+        featuresheader="ХАРАКТЕРИСТИКИ" descriptionheader="ОПИСАНИЕ" installbuttontext="УСТАНОВИТЬ"
+        cancelbuttontext="ОТМЕНИТЬ" iosinstallinfotext=" "></pwa-install>
     </div>
   </div>
 
@@ -621,7 +619,12 @@
       </div> 
     </div>
   </div>
-  <!-- <script src="app.js"></script> -->
+  <!-- Скрипт SERVICEWORKER -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
   <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 
   <script>
