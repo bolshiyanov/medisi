@@ -489,7 +489,7 @@ p {
     margin-top: -12px;
 }
 
-.pwa-box {
+.install-box-for-pwa {
     display: flex;
     justify-self: center;
     flex-flow: row nowrap;
