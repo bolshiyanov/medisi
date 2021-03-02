@@ -10,6 +10,7 @@ const assets = [
   'plugins/player2.js',
   'plugins/player3.js',
   'plugins/player4.js',
+  'pwa-install.js',
   'linkCopy.js',
   'css/index.css',
   'css/styles.css',
