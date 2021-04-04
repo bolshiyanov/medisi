@@ -13,6 +13,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    background: #4f99bb;
     background-image: url(lubov-medisi.jpg);
     background-position: center, center;
     background-size: cover;

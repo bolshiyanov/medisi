@@ -283,8 +283,8 @@ const free_tracks = [
         howl: null
     },
     {
-        title: 'Создание совершенного Я, демо',
-        file: 'medisidemo_16',
+        title: 'Супер медитация, демо',
+        file: 'medisidemo_14',
         howl: null
     }
 ]
@@ -310,8 +310,8 @@ const premium_tracks = [
         howl: null
     },
     {
-        title: 'Создание совершенного Я',
-        file: 'medisiaudio_16',
+        title: 'Супер медитация',
+        file: 'medisiaudio_14',
         howl: null
     }
 ]
